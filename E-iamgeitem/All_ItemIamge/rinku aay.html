@@ -1,0 +1,846 @@
+
+<!-- saved from url=(0111)https://edistrict.up.gov.in/edistrictup/certVerify.aspx?application_no=MjMxOTkwMDEwMTEwMTAyJTJjNjk0MjMxMDI5ODI0 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	VERIFICATION
+</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="./rinku aay_files/jquery-1.11.3.min.js.download" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        window.onload = function () {
+            //$("div#divLoading").addClass('show');
+            var Appno = document.getElementById('HFAppNo').value;
+            var Cerid = document.getElementById('HFCertID').value;
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "certVerify.aspx/Search",
+                data: "{'Appno':'" + Appno + "','Cerid':'" + Cerid + "'}",
+                dataType: "json",
+                success: function (data) {
+                    var result = data.d;
+                    var Code = result.split("#");
+
+                    var Cert_Type = Code[0];
+                    var JsonData = Code[1];
+
+                    var DBData = jQuery.parseJSON(JsonData);
+
+                    if (Cert_Type.toUpperCase() == "DC") {
+                        document.getElementById('View1').style.display = "none";
+                        document.getElementById('View2').style.display = "none";
+                        document.getElementById('View3').style.display = "none";
+                        document.getElementById('View4').style.display = "block";
+
+                        document.getElementById('lblNApp_No').innerHTML = DBData.ApplicationNumber;
+                        document.getElementById('lblNCert_Id').innerHTML = DBData.certificateNumber;
+                        document.getElementById('lblNCertType').innerHTML = DBData.CertificateType;
+                        document.getElementById('Label3').innerHTML = DBData.Name;
+                        document.getElementById('lblFname').innerHTML = DBData.FatherName;
+                        document.getElementById('lblGender').innerHTML = DBData.sex;
+                        document.getElementById('lblAddress').innerHTML = DBData.address;
+                        document.getElementById('lbldeathDate').innerHTML = DBData.DeathDate;
+                        document.getElementById('lbldeathPlace').innerHTML = DBData.DeathPlace;
+                        document.getElementById('lblRegNo').innerHTML = DBData.RegistrationNumber;
+                        document.getElementById('lblRegDate').innerHTML = DBData.registrationDate;
+                        document.getElementById('showRemarkDeathtab').innerHTML = DBData.Remark;
+
+                    }
+                    else if (Cert_Type.toUpperCase() == "BC") {
+                        document.getElementById('View1').style.display = "none";
+                        document.getElementById('View2').style.display = "none";
+                        document.getElementById('View3').style.display = "block";
+                        document.getElementById('View4').style.display = "none";
+
+                        document.getElementById('lblApp_no').innerHTML = DBData.ApplicationNumber;
+                        document.getElementById('lblCert_id').innerHTML = DBData.certificateNumber;
+                        document.getElementById('lblCert_Type').innerHTML = DBData.CertificateType;
+                        document.getElementById('lblName').innerHTML = DBData.Name;
+                        document.getElementById('lblSex').innerHTML = DBData.Gender;
+                        document.getElementById('BirthDate').innerHTML = DBData.BirthDate;
+                        document.getElementById('BirthPlace').innerHTML = DBData.BirthPlace;
+                        document.getElementById('NameF').innerHTML = DBData.FatherName;
+                        document.getElementById('NameM').innerHTML = DBData.MotherName;
+                        document.getElementById('addBC').innerHTML = DBData.address;
+                        document.getElementById('RegisNo').innerHTML = DBData.RegistrationNumber;
+                        document.getElementById('RegDate').innerHTML = DBData.registrationDate;
+                        document.getElementById('showRemarkBirthtab').innerHTML = DBData.Remark;
+                    }
+                    else {
+                        document.getElementById('View1').style.display = "none";
+                        document.getElementById('View2').style.display = "block";
+                        document.getElementById('View3').style.display = "none";
+                        document.getElementById('View4').style.display = "none";
+
+                        document.getElementById('app_no').innerHTML = DBData.ApplicationNumber;
+                        document.getElementById('cert_id').innerHTML = DBData.certificateNumber;
+                        document.getElementById('cert_type').innerHTML = DBData.CertificateType;
+                        document.getElementById('name').innerHTML = DBData.Name;
+                        document.getElementById('fat_husb').innerHTML = DBData.Father_HusbandName;
+                        if (DBData.hasOwnProperty('casteLabel')) {
+                            if (Cert_Type.toUpperCase() == "GR") {
+                                document.getElementById('Label1').innerHTML = 'जाति';
+                            }
+                            else {
+                                document.getElementById('Label1').innerHTML = DBData.casteLabel;
+                            }
+                        }
+                        else {
+                                document.getElementById('Label1').innerHTML = '';
+                        }
+                        if (DBData.hasOwnProperty('Class')) {
+                            document.getElementById('Label2').innerHTML = DBData.Class;
+                        }
+                        else {
+                            if (Cert_Type.toUpperCase() == "GR") {
+                                
+                            }
+                            else {
+                                document.getElementById('Label2').innerHTML = '';
+                            }
+                        }
+
+                        if (Cert_Type.toUpperCase() == "GR") {
+                            document.getElementById('address').innerHTML = DBData.address;
+                            document.getElementById("houseNoLbl").textContent = "पता";
+                            document.getElementById('addrow3').style.display = "none";
+                        }
+                        else {
+                            document.getElementById('address').innerHTML = DBData.HouseNo;
+                            document.getElementById("houseNoLbl").textContent = "मकान नम्बर";
+                            document.getElementById('addrow3').style.display = "block";
+                            document.getElementById('pmohalla').innerHTML = DBData.Mohalla_Post;
+                        }
+
+                        document.getElementById('pgram').innerHTML = DBData.Gram;
+                        
+                        document.getElementById('tehsil').innerHTML = DBData.Tehsil;
+                        document.getElementById('district').innerHTML = DBData.District;
+                        document.getElementById('approvaloff').innerHTML = DBData.ApprovalAuthourity;
+                        document.getElementById('verifyoff').innerHTML = DBData.VerifyingAuthority;
+                        if (DBData.hasOwnProperty('Remark')) {
+                            if (DBData.URL == '' && DBData.CaseSubject == '')
+                                document.getElementById('showRemarktab').innerHTML = DBData.Remark; 
+                            else
+                                document.getElementById('showRemarktab').innerHTML = '<a href=' + DBData.URL + ' target=_blank > ' + DBData.CaseSubject + '</a><br/>' + DBData.Remark; 
+                        }
+                        else {
+                            document.getElementById('showRemarktab').innerHTML = '-';
+                        }
+
+                        // Conditions for showdetail
+
+                        //if (DBData.showdetail.toUpperCase() == 'YES') {
+                        //    document.getElementById('addrow1').style.display = "table-row";
+                        //    document.getElementById('addrow2').style.display = "table-row";
+                        //    document.getElementById('addrow3').style.display = "table-row";
+                        //    document.getElementById('showadd').style.display = "table-row";
+                        //}
+                        //else {
+                        //    document.getElementById('addrow1').style.display = "none";
+                        //    document.getElementById('addrow2').style.display = "none";
+                        //    document.getElementById('addrow3').style.display = "none";
+                        //    document.getElementById('showadd').style.display = "none";
+                        //}
+
+                        if (Cert_Type.toUpperCase() != "GR") {
+                            if (DBData.showdetail != null &&
+                                DBData.showdetail.toUpperCase() === 'YES') {
+
+                                document.getElementById('addrow1').style.display = "table-row";
+                                document.getElementById('addrow2').style.display = "table-row";
+                                document.getElementById('addrow3').style.display = "table-row";
+                                document.getElementById('showadd').style.display = "table-row";
+
+                            } else {
+
+                                document.getElementById('addrow1').style.display = "none";
+                                document.getElementById('addrow2').style.display = "none";
+                                document.getElementById('addrow3').style.display = "none";
+                                document.getElementById('showadd').style.display = "none";
+                            }
+                        }
+
+
+                        // Conditions for Caste and Income Certificate
+                        if (Cert_Type.toUpperCase() == "CC") {
+                            document.getElementById('Label1').innerHTML = 'जाति/उप‌जाति';
+                            document.getElementById('Label2').innerHTML = DBData.Class
+                            if (DBData.issuedt != '') {
+                                document.getElementById('ROWCH').style.visibility = 'visible';
+                                document.getElementById('lblcertdt').innerHTML = 'प्रमाण पत्र जारी दिनांक';
+                                document.getElementById('CertDt').innerHTML = DBData.issuedt;
+                            }
+                        }
+                        else if (Cert_Type.toUpperCase() == "CI") {
+                            document.getElementById('Label1').innerHTML = 'मासिक आय अंकों में';
+                            document.getElementById('Label2').innerHTML = DBData.finalIncome + "/-";
+                            if (DBData.issuedt != '') {
+                                document.getElementById('ROWCH').style.visibility = 'visible';
+                                document.getElementById('lblcertdt').innerHTML = 'प्रमाण पत्र जारी दिनांक';
+                                document.getElementById('CertDt').innerHTML = DBData.issuedt;
+                            }
+                        }
+                        else if (Cert_Type.toUpperCase() == "CD") {
+                                if (DBData.issuedt != '') {
+                                document.getElementById('ROWCH').style.visibility = 'visible';
+                                document.getElementById('lblcertdt').innerHTML = 'प्रमाण पत्र जारी दिनांक';
+                                document.getElementById('CertDt').innerHTML = DBData.issuedt;
+                            }
+                        }
+
+                        else if (Cert_Type.toUpperCase() == "SL") {
+                            document.getElementById('Label1').innerHTML = 'हैसियत रू. में';
+                            document.getElementById('Label2').innerHTML = DBData.finalIncome + "/-";
+
+                            if (DBData.issuedt != '') {
+                                document.getElementById('ROWCH').style.visibility = 'visible';
+                                document.getElementById('lblcertdt').innerHTML = 'प्रमाण पत्र जारी दिनांक';
+                                document.getElementById('CertDt').innerHTML = DBData.issuedt;
+                            }
+                        }
+                        else if (Cert_Type.toUpperCase() == "CH") {
+                            if (DBData.perds != null && DBData.perds != '') {
+                                document.getElementById('ROWCH').style.visibility = 'visible';
+                                document.getElementById('Label1').innerHTML = 'अपंगता का अध्यर्थ प्रतिशत';
+                                document.getElementById('Label2').innerHTML = DBData.perds;
+
+                                document.getElementById('lblcertdt').innerHTML = 'प्रमाण पत्र तिथि';
+                                document.getElementById('CertDt').innerHTML = DBData.certDt;
+                            }
+                        }
+                        else {
+                            //document.getElementById('Label1').innerHTML = '';
+                        }
+
+                        // Conditions for Approveandverifying authority 
+                        if (DBData.ApprovalAuthourity != '' && DBData.VerifyingAuthority != '') {
+                            document.getElementById('off').style.display = "table-row";
+                            document.getElementById('appoff').style.display = "table-row";
+                            document.getElementById('veroff').style.display = "table-row";
+                        }
+                        else {
+
+                            document.getElementById('off').style.display = "none";
+                            document.getElementById('appoff').style.display = "none";
+                            document.getElementById('veroff').style.display = "none";
+                        }
+
+                    }
+
+                    $("div#divLoading").removeClass('show');
+                },
+                error: function (result) {
+                    alert(result.d);
+                }
+            });
+        };
+
+    </script>
+    
+    <style type="text/css">
+        #divLoading
+        {
+            display: none;
+        }
+        
+        #divLoading.show
+        {
+            display: block;
+            position: fixed;
+            z-index: 100;
+            background-image: url('imagesR/loading-animation.gif');
+            background-size: 300px 300px;
+            background-color: #000;
+            opacity: 0.25;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+        }
+    </style>
+    
+    
+    <style type="text/css">
+        .reportlabel
+        {
+            border-top: #000000 1px solid !important;
+            font-size: 10pt !important;
+            font-family: verdana !important;
+            text-align: left !important;
+        }
+        .style1
+        {
+            border-top: #000000 1px solid !important;
+            font-size: large !important;
+            font-family: verdana !important;
+            text-align: left !important;
+        }
+        .style2
+        {
+            font-size: large !important;
+            color: #993333 !important;
+        }
+        .style3
+        {
+            font-family: "Arial Unicode MS" !important;
+            font-size: 20px !important;
+        }
+        .style4
+        {
+            width: 17% !important;
+            height: 34px !important;
+        }
+        .style5
+        {
+            height: 34px !important;
+        }
+        .style6
+        {
+            color: white !important;
+            height: 32px !important;
+        }
+        .style7
+        {
+            color: #663300 !important;
+        }
+        .control
+        {
+        }
+        .style8
+        {
+            height: 22px !important;
+        }
+        .style9
+        {
+            width: 17% !important;
+            height: 37px !important;
+        }
+        .style10
+        {
+            height: 37px !important;
+        }
+        
+        .navi
+        {
+            position: absolute;
+            top: 10%;
+            color: white;
+            right: 10%;
+        }
+        
+        
+        
+        .tableWidth
+        {
+            width:74%;
+            }
+            
+            .objectHeight1
+            {
+                height:120px;
+                }
+                
+                .objectHeight2
+            {
+                height:130;
+                }
+            
+            @media only screen and (max-width: 480px)
+{
+    .tableWidth
+        {
+            width:100%;
+            }
+            .objectHeight1
+            {
+                height:120px;
+                }
+                
+                .objectHeight2
+            {
+                height:260px;
+                }
+            .navi
+        {
+            position: absolute;
+            top: 6.5%;
+            color: white;
+            right: 5%;
+        }
+}
+            
+    </style>
+</head>
+<body style="background: url('imagesR/1.png') #e5e5e5;">
+    <form method="post" action="https://edistrict.up.gov.in/edistrictup/certVerify.aspx?application_no=MjMxOTkwMDEwMTEwMTAyJTJjNjk0MjMxMDI5ODI0" id="ctl00">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzczNzYzNTcyD2QWAgIDD2QWAgIFDxYCHgVzdHlsZQUOZGlzcGxheTpibG9jaztkZATuDKhdghZP0SmTHSWtLxnLJP8OOP4ZuZ4XQnX4g27w">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DD1D7E36">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAPmnwEyz8FrS8p6aMzmDc5ljPLO03E8DHwC9qNs0BWwnjfFzGFdtdoHWj9RpTLIu08HglUrqaQ/wAX1+EXUbdJ7/BhLnQA93pH3Z4v/ajx4lw==">
+</div>
+    <input type="hidden" name="HFAppNo" id="HFAppNo" value="231990010110102">
+    <input type="hidden" name="HFCertID" id="HFCertID" value="694231029824">
+    <div class="navi">
+        <img id="Img" src="./rinku aay_files/close-icon-png.png" onclick="window.close();" style="height: 28px;
+            width: 31px; float: right" title="Close" alt="Close">
+    </div>
+    <object width="100%" class="objectHeight1" data="./rinku aay_files/Header.html">
+    </object>
+    <table style="width: 100%; margin: 20px 0px 20px 0px;">
+        <tbody><tr>
+            <td>
+                <div id="View1" style="display: none;">
+                    <table id="CompStatusTab" align="center" cellpadding="0" cellspacing="0" style="border-right: #000000 1px solid; border-top: #000000 1px solid; border-left: #000000 1px solid;
+                        border-bottom: #000000 1px solid; width: 50%;" bgcolor="#ffcc99">
+	<tbody><tr>
+		<td bgcolor="#996633" colspan="3" style="border-bottom: #000000 1px solid; text-align: center;" width="25%" class="style6">
+                                <strong class="style3">प्रमाण पत्र को सत्यापित करने हेतु </strong>
+                            </td>
+	</tr>
+	<tr style="font-size: 12pt; color: #000000; font-family: Times New Roman">
+		<td align="left" colspan="3" style="text-align: center" class="style8">
+                                <span id="ErrorMsg" style="color:#C00000;font-family:Verdana;font-size:Small;font-weight:bold;font-family: 'Arial Unicode MS'"></span>&nbsp;&nbsp;&nbsp;
+                            </td>
+	</tr>
+	<tr style="font-size: 12pt; font-family: Times New Roman">
+		<td align="right" colspan="3" style="border-top: #000000 1px solid; text-align: left;">
+                                &nbsp;<span style="font-size: 10pt;" class="style7">* आय, जाति, निवास व विकलाग प्रमाण
+                                    पत्र हॆतु</span>
+                            </td>
+	</tr>
+	<tr id="dispmsgRow" style="font-size: 12pt; font-family: Times New Roman">
+		<td id="dispmsg" align="right" colspan="3" style="border-top: #000000 1px solid;
+                                text-align: left;">
+                                &nbsp;
+                            </td>
+	</tr>
+</tbody></table>
+
+                </div>
+                <div id="View2" style="display: block;">
+                    <div style="text-align: center">
+                        <span class="style3"><strong>निर्गत प्रमाण पत्र का विवरण‌ &nbsp;</strong></span>
+                    </div>
+                    <br>
+                    <table id="Table1" align="center" class="tableWidth" border="1" cellpadding="0" cellspacing="0" style="border-right: black thin solid; border-top: black thin solid; border-bottom-width: thin;
+                        border-bottom-color: black; border-left: black thin solid; height: 321px">
+                        <tbody><tr>
+                            <td align="left" bgcolor="#cccccc" class="reportlabel" colspan="2" style="text-align: left">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" width="33%">
+                                <strong>आवेदन संख्या </strong>
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="app_no">231990010110102</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" width="33%">
+                                <span style="font-size: 9pt">प्रमाण पत्र संख्या :</span>
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="cert_id">694231029824</span>
+                            </td>
+                        </tr>
+                          <tr id="ROWCH" style="visibility: visible;">
+	<td align="left" class="reportlabel" width="33%">
+                                <span id="lblcertdt" style="font-size: 9pt">प्रमाण पत्र जारी दिनांक</span>
+                            </td>
+	<td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="CertDt">30/08/2023</span>
+                            </td>
+</tr>
+
+                        <tr>
+                            <td align="left" class="reportlabel" width="33%">
+                                प्रमाण पत्र का प्रकार
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="cert_type">आय प्रमाण पत्र</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" width="33%">
+                                &nbsp;नाम
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                &nbsp;<span id="name">रिंकू कुमार/RINKU KUMAR</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" width="33%">
+                                &nbsp;पिता/पति का नाम
+                            </td>
+                            <td class="reportlabel" width="67%">
+                                &nbsp;<span id="fat_husb"> राजेश प्रजापति</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" width="33%">
+                                <span id="Label1">मासिक आय अंकों में</span>&nbsp;
+                            </td>
+                            <td class="reportlabel" width="67%">
+                                &nbsp;<span id="Label2">3833.33/-</span>&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#cccccc" class="reportlabel" style="text-align: left" width="33%">
+                                <strong>&nbsp;पता</strong>
+                            </td>
+                            <td bgcolor="#cccccc" class="reportlabel" style="text-align: left" width="67%">
+                                &nbsp;<span id="showadd" style="display: table-row;">*दिनांक  01/01/2015 व उसकॆ बाद कॆ आवॆदनॊं हॆतु</span>
+                            </td>
+                        </tr>
+                        <tr id="addrow1" style="display: table-row;">
+	<td class="reportlabel" width="33%">
+                                &nbsp;<label id="houseNoLbl">मकान नम्बर</label>
+                            </td>
+	<td class="reportlabel" width="67%">
+                                &nbsp;<span id="address"></span>
+                            </td>
+</tr>
+
+                        <tr id="addrow2" style="display: table-row;">
+	<td class="reportlabel" width="33%">
+                                &nbsp;ग्राम
+                            </td>
+	<td class="reportlabel" width="67%">
+                                &nbsp;
+                                <span id="pgram">बेलवारी</span>
+                            </td>
+</tr>
+
+                        <tr id="addrow3" style="display: table-row;">
+	<td class="reportlabel" width="33%">
+                                &nbsp;मौहल्ला/पोस्ट
+                            </td>
+	<td class="reportlabel" width="67%">
+                                &nbsp;<span id="pmohalla">ग्राम- बेलवारी, पोस्ट-देवरिया, परगना- हवेली पिन 231305</span>
+                            </td>
+</tr>
+
+                        <tr>
+                            <td class="reportlabel" width="33%">
+                                &nbsp;तहसील
+                            </td>
+                            <td class="reportlabel" width="67%">
+                                &nbsp;<span id="tehsil">चूनार</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" width="33%">
+                                &nbsp;जनपद
+                            </td>
+                            <td class="reportlabel" width="67%">
+                                &nbsp;<span id="district">मिर्ज़ापुर</span>
+                            </td>
+                        </tr>
+                        <tr id="off" style="display: table-row;">
+	<td class="reportlabel" bgcolor="gainsboro" width="33%">
+                                <strong>सम्बन्घित अधिकारी</strong>
+                            </td>
+	<td class="reportlabel" bgcolor="gainsboro" width="67%">
+                                &nbsp;
+                            </td>
+</tr>
+
+                        <tr id="appoff" style="display: table-row;">
+	<td class="reportlabel" width="33%">
+                                जारी कर्ता अधिकारी
+                            </td>
+	<td class="reportlabel" width="67%">
+                                <span id="approvaloff">Shakti Pratap Singh</span>
+                            </td>
+</tr>
+
+                        <tr id="veroff" style="display: table-row;">
+	<td class="reportlabel" width="33%">
+                                जाँच अधिकारी
+                            </td>
+	<td class="reportlabel" width="67%">
+                                <span id="verifyoff">मोतीलाल</span>
+                            </td>
+</tr>
+
+                        <tr id="showRemark">
+	<td class="style1" width="33%">
+                                Remark
+                            </td>
+	<td id="showRemarktab" class="reportlabel" width="67%">-</td>
+</tr>
+
+                        <tr>
+                            <td bgcolor="#cccccc" align="right" colspan="2" width="28%">
+                                Certificate Verification as on : &nbsp; 17-10-2026 11:58 पूर्वाह्न
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div id="View3" style="display: none;">
+                    <div style="text-align: center">
+                        <span class="style3"><strong>निर्गत प्रमाण पत्र का विवरण‌ &nbsp;</strong></span>
+                    </div>
+                    <br>
+                    <table id="Table2" align="center" class="tableWidth" border="1" cellpadding="0" cellspacing="0" style="border-right: black thin solid; border-top: black thin solid; border-bottom-width: thin;
+                        border-bottom-color: black; border-left: black thin solid; height: 321px">
+                        <tbody><tr>
+                            <td align="left" bgcolor="#cccccc" class="reportlabel" colspan="2" style="text-align: left">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                <strong>आवेदन संख्या </strong>
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="lblApp_no"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                <span style="font-size: 9pt">प्रमाण पत्र संख्या :</span>
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="lblCert_id"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                प्रमाण पत्र का प्रकार
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                <span id="lblCert_Type"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                &nbsp;नाम<br>
+                                &nbsp;Name
+                            </td>
+                            <td class="reportlabel" style="font-size: 10pt; font-family: verdana" width="67%">
+                                &nbsp;<span id="lblName"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                लिंग<br>
+                                &nbsp;Sex
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="lblSex" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                जन्म का दिनांक एवं स्थान<br>
+                                &nbsp;Date of Birth &amp; Place
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="BirthDate" style="font-weight:normal;"></span>&nbsp;
+                                <span id="BirthdateHindi" style="font-weight:normal;"></span>
+                                \ &nbsp;<span id="BirthPlace" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पिता का नाम<br>
+                                &nbsp;Name of Father
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="SaluteF" style="font-weight:normal;"></span><span id="NameF" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                माता का नाम
+                                <br>
+                                &nbsp;Name of Mother
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="SaluteM" style="font-weight:normal;"></span><span id="NameM" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पता<br>
+                                &nbsp;Address
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="addBC" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पंजीकरण संख्या<br>
+                                &nbsp;Registration No.
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="RegisNo" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पंजीकरण का दिनांक<br>
+                                &nbsp;Date of Registration
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold" width="67%">
+                                <span id="RegDate" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr id="showRemarkBirth">
+	<td class="style1" width="33%">
+                                Remark
+                            </td>
+	<td id="showRemarkBirthtab" class="reportlabel" width="67%">
+                            </td>
+</tr>
+
+                        <tr>
+                            <td bgcolor="#cccccc" align="right" colspan="2" width="28%">
+                                Certificate Verification as on : &nbsp; 17-10-2026 11:58 पूर्वाह्न
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div id="View4" style="display: none;">
+                    <div style="text-align: center">
+                        <span class="style3"><strong>निर्गत प्रमाण पत्र का विवरण‌ &nbsp;</strong></span>
+                    </div>
+                    <br>
+                    <table id="Table3" align="center" class="tableWidth" border="1" cellpadding="0" cellspacing="0" style="border-right: black thin solid; border-top: black thin solid; border-bottom-width: thin;
+                        border-bottom-color: black; border-left: black thin solid; height: 321px">
+                        <tbody><tr>
+                            <td align="left" bgcolor="#cccccc" class="reportlabel" colspan="2">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                आवेदन संख्या
+                            </td>
+                            <td class="reportlabel" style="width: 64%">
+                                <span id="lblNApp_No" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                <span style="font-size: 9pt">प्रमाण पत्र संख्या</span>
+                            </td>
+                            <td class="reportlabel" style="width: 64%">
+                                <span id="lblNCert_Id" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                प्रमाण पत्र का प्रकार
+                            </td>
+                            <td class="reportlabel" style="width: 64%">
+                                <span id="lblNCertType" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="reportlabel" style="width: 36%">
+                                नाम<br>
+                                &nbsp;Name
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="Label3" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पिता/पति का नाम<br>
+                                &nbsp;Name of Father/Husband
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="lblFname" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                लिंग<br>
+                                &nbsp;Sex
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="lblGender" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पता<br>
+                                &nbsp;Address
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="lblAddress" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%; height: 34px">
+                                मृत्यु का दिनांक एवं स्थान<br>
+                                &nbsp;Date of Death &amp; Place
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="lbldeathDate" style="font-weight:normal;"></span>/
+                                <span id="lbldeathPlace" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पंजीकरण संख्या<br>
+                                &nbsp;Registration No.
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="lblRegNo" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="reportlabel" style="width: 36%">
+                                पंजीकरण का दिनांक<br>
+                                &nbsp;Date of Registration
+                            </td>
+                            <td class="reportlabel" style="font-weight: bold; width: 64%">
+                                <span id="lblRegDate" style="font-weight:normal;"></span>
+                            </td>
+                        </tr>
+                        <tr id="showRemarkDeath">
+	<td class="style1" width="33%">
+                                Remark
+                            </td>
+	<td id="showRemarkDeathtab" class="reportlabel" width="67%">
+                            </td>
+</tr>
+
+                        <tr>
+                            <td bgcolor="#cccccc" align="right" colspan="2">
+                                Certificate Verification as on : &nbsp; 17-10-2026 11:58 पूर्वाह्न
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+    <object width="100%" class="objectHeight2" data="./rinku aay_files/Footer.html">
+    </object>
+    <div style="text-align: center; width: 100%; background-color: antiquewhite;">
+        <b>Disclaimer:</b> Content on this website is owned by Centre for e-Governance(CeG),
+        Department of IT &amp; Electronics, Govt. of Uttar Pradesh.Every effort has been made
+        to ensure accuracy of data on this web site. However these need to be verified by
+        and supplemented with documents issued finally by the concerned authorities. NIC
+        will not be responsible for any decision or claim that is based on the basis of
+        displayed data. This disclaimer applies to all the pages of this website.</div>
+    <div id="divLoading" class="">
+    </div>
+    </form>
+
+
+</body></html>

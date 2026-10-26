@@ -1,0 +1,530 @@
+﻿
+
+.divheading
+{
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+    background-color: #ff9933; /*background-image: linear-gradient(#0a63a4,#c5d1db );*/
+    border: 1px solid #ff9933;
+    font-size: bold;
+    border-radius: 7px 7px 0px 0px;
+    margin-top: -4px; /*color: black;*/
+    color: white;
+    font-family: "Verdana";
+    font-weight: bold;
+}
+.divgallery
+{
+    padding-top: 7px;
+    text-align: center;
+    color: white;
+    background-color: #ff9933;
+    font-size: 20px;
+    font-family: Arial Unicode MS; /*font-weight:bold;*/
+    width: auto;
+    height: 31px;
+    border: 1px solid #c4c6d5;
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+.modern-ticker
+{
+    width: 96%;
+    min-height: 25px;
+    line-height: 16px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 0;
+    border: thin solid #ccc;
+    margin-top: -3px;
+    position: relative;
+    background: #fff0ec;
+    border-radius: 8px;
+    padding-top: 5px;
+}
+
+.btnFont
+{
+    color: #333 !important;
+    background-color: #fff !important;
+    border-color: #ccc !important;
+    float: right !important;
+    border-right: 1px solid #CCC !important;
+    padding: 2px 5px 2px 5px !important;
+    font-weight: bold !important;
+}
+.lanbutton
+{
+    background: transparent !important;
+    background-color: transparent !important;
+    border: medium none !important;
+    font-family: 'Lohit Devanagari' , Arial, Sans-serif !important;
+    font-size: 1.2em !important;
+    color: #000 !important;
+    float: right !important;
+    border-right: 1px solid #CCC !important;
+    padding-right: 5px !important;
+}
+.btn-red
+{
+    background: #bc5a07 !important;
+    background-color: #bc5a07 !important;
+    color: Red !important;
+    border: 1px solid #bc5a07 !important;
+    border-radius: 50% !important;
+    height: 15px !important;
+    width: 15px !important;
+    float: right !important;
+    margin-top: 5px !important;
+    margin-right: 3px !important;
+}
+.btn-blue
+{
+    background: #0689E9 !important;
+    background-color: #0689E9 !important;
+    color: #0689E9 !important;
+    border: 1px solid #0689E9 !important;
+    border-radius: 50% !important;
+    height: 15px !important;
+    width: 15px !important;
+    float: right !important;
+    margin-top: 5px !important;
+    margin-right: 3px !important;
+}
+.btn-green
+{
+    background: #027833 !important;
+    background-color: #027833 !important;
+    color: #027833 !important;
+    border: 1px solid #027833 !important;
+    border-radius: 50% !important;
+    height: 15px !important;
+    width: 15px !important;
+    float: right !important;
+    margin-top: 5px !important;
+    margin-right: 3px !important;
+}
+.btn-saffron
+{
+    background: #ff9933 !important;
+    background-color: #ff9933 !important;
+    color: #ff9933 !important;
+    border: 1px solid #ff9933 !important;
+    border-radius: 50% !important;
+    height: 15px !important;
+    width: 15px !important;
+    float: right !important;
+    margin-top: 5px !important;
+    margin-right: 3px !important;
+}
+
+
+
+
+
+/*.divanchor
+{
+    font-size: 13px; 
+    font-family: Arial Unicode MS;
+     color: #0e0c0c;
+    
+}
+*/
+
+.divcontent
+{
+    font-size: 13px;
+    color: #ff6f00;
+    font-weight: bold;
+}
+
+
+.menuLink
+{
+    /*margin-left: -20%;*/
+    font-size: 17px;
+    font-family: Arial Unicode MS;
+}
+.diviframe
+{
+    height: 200px;
+    width: 100%;
+    background-color: #b3acac;
+    border: none;
+}
+.divsub
+{
+    color: #ff0237;
+    background-color: rgba(234, 170, 54, 0.38);
+    margin-top: 5px;
+    height: 53px;
+}
+.ResChartParent
+{
+    width: 100%;
+}
+.ResChart1
+{
+    float: left;
+    width: 49%;
+}
+.ResChart2
+{
+    float: left;
+    width: 47%;
+}
+@media only screen and (max-width: 480px)
+{
+
+    .ResChart1
+    {
+        float: left;
+        width: 100%;
+    }
+    .ResChart2
+    {
+        float: left;
+        width: 100%;
+    }
+
+}
+
+.samajwadi
+{
+    width: 60%;
+    float: left;
+    margin-top: 18px;
+}
+.Status
+{
+    width: 14%;
+    float: left;
+    margin-top: 18px;
+}
+
+.Verfication
+{
+    width: 26%;
+    float: left;
+    margin-top: 18px;
+}
+@media only screen and (max-width: 480px)
+{
+    .samajwadi
+    {
+        width: 100%;
+        float: left;
+        margin-top: 18px;
+    }
+    .Status
+    {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+    }
+
+    .Verfication
+    {
+        width: 100%;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+}
+
+
+
+
+.Sliderheading
+{
+    font-size: 20px;
+}
+
+.fixed-ratio-resize
+{
+    /* basic responsive img */
+    max-width: 100%;
+    height: auto;
+    width: auto\2; /* IE8 */
+}
+
+.adminlist
+{
+}
+.adminlist ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.adminlist ul li
+{
+    width: 200px;
+    background-color: Green;
+}
+
+.adminlist ul li a
+{
+    font-size: 20px;
+    color: Blue;
+}
+
+.listItem
+{
+    background-color: Orange;
+    width: 200px;
+    font-size: 20px;
+    height: 25px;
+    border-bottom: 1px dotted white;
+}
+
+
+
+.navNew
+{
+}
+.navNew ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+.navNew ul li
+{
+    list-style-type: none;
+    display: inline;
+    width: 250px;
+    border-left: 1px dotted #FFFFFF;
+}
+.navNew ul li a
+{
+    color: #FFFFFF;
+    width: 300px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+.navNew ul li a: hover
+{
+    color: Orange;
+    width: 300px;
+    padding: 10px 20px 10px 100px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+
+/*=========================================================================*/
+
+
+.VerificationPanel
+{
+    color: #ff0237;
+    background-color: #fafafa;
+    margin-top: 5px;
+    height: 53px;
+}
+.VerificationNewImg
+{
+    margin-left: 365px;
+    margin-top: -21px;
+}
+
+.SliderStyle
+{
+    height: 232px;
+    width: 97.5%;
+    margin: auto;
+    float: right;
+}
+.GraphStyle1
+{
+    height: 180px;
+    margin: 3px 3px 0px 7px;
+}
+.GraphStyle2
+{
+    height: 180px;
+    margin: 2px 5px 1px 6px;
+}
+.FooterStyle
+{
+    padding: 0px;
+    margin: auto;
+    min-width: 350px !important;
+}
+
+.SliderImgHeight
+{
+    height: 232px;
+}
+
+
+.FooterImg
+{
+    height: 82px;
+    width: 138px;
+    margin-top: 5px;
+}
+
+
+.BottomContainer
+{
+    padding-top: 0px;
+}
+.BottomContainer1
+    {
+        padding-top: 0px;
+        background-color: #ddd;
+       
+    }
+
+@media only screen and (max-width: 480px)
+{
+    .VerificationPanel
+    {
+        height: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .VerificationNewImg
+    {
+        margin-left: 0px;
+        float: right;
+        margin-top: -21px;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top
+    {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+
+    .SliderStyle
+    {
+        /*height: 232px;*/
+        height: 125px;
+        width: 100%;
+        margin: auto;
+        float: right;
+    }
+
+
+    body
+    {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    .GraphStyle1
+    {
+        height: 180px;
+        margin: 3px 3px 5px 0px;
+    }
+    .GraphStyle2
+    {
+        height: 180px;
+        margin: 5px 3px 5px 0px;
+    }
+
+
+    span6New
+    {
+        margin-top: 0px !important;
+    }
+
+
+    .FooterStyle
+    {
+        padding: 0px;
+        margin: 0px;
+        min-width: 100% !important;
+    }
+
+
+    .DivSpan
+    {
+        margin-left: -7.5% !important;
+    }
+
+.DivSpanRight {
+    margin-right: 7.5% !important;
+}
+    /*#footer .cp
+                            {
+                                margin-left: 10% !important;
+                            }*/
+    .NicLogoStyle
+    {
+        padding-top: 2% !important;
+        margin-left: 11% !important;
+    }
+
+    .GoToImgStyle
+    {
+        margin-top: -40px !important;
+    }
+
+    .SliderImgHeight
+    {
+        height: 125px !important;
+    }
+
+    #main
+    {
+        margin-right: -10px !important;
+    }
+
+    .navbar
+    {
+        margin-bottom: 0px !important;
+    }
+
+    .float-right
+    {
+        float: right;
+    }
+
+    .span6New
+    {
+        margin-top: 0px !important;
+    }
+
+    .margin-11pec
+    {
+        margin-left: 11% !important;
+    }
+    
+    .margin-11percentage {
+    margin-left: 11% !important;
+    margin-right: 11%;
+}
+
+    .FooterImg
+    {
+        height: 50px;
+        width: 138px;
+        margin-top: 5px;
+    }
+
+
+
+    .BottomContainer
+    {
+        padding-top: 0px;
+        margin-bottom: -30px;
+    }
+    .BottomContainer1
+    {
+        padding-top: 0px;
+        background-color: #ddd;
+        padding: 20px;
+    }    
+   
+.modal {
+    left: 0px !important;
+}
+}

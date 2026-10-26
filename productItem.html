@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone | Product</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="E-commerceStylish.css">
+    <link rel="stylesheet" href="categorySwitch.css">
+</head>
+
+<body style="overflow:hidden;">
+
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+
+        <!-- ShopZone Logo -->
+        <div class="logo-area">
+            <div class="logo-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <div class="logo-text">
+                <h1>Shop<span>Zone</span></h1>
+                <p>Better product <b>•</b> Better Life</p>
+            </div>
+        </div>
+
+
+        <!-- Search Box -->
+        <div class="search-area">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text"
+                       placeholder="Search products, brands and more...">
+
+                <button>
+                    Search
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Header Buttons -->
+        <div class="header-actions">
+
+<a href="E-commerceIndex.html" class="home-btn" id="homeBtn" aria-label="Go to home page" title="Home"><i class="fa-solid fa-house"></i></a>
+<div id="pageTransition" aria-hidden="true"></div>
+            <button class="login-btn">
+                <i class="fa-solid fa-user"></i>
+                Login / Register
+            </button>
+
+            <div class="header-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>2</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+    <div class="page-layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="category-sidebar">
+
+            <div class="category-title">
+                <i class="fa-solid fa-grip"></i>
+                <h2>Categories</h2>
+            </div>
+
+
+            <!-- Category Item -->
+            <a href="#mobile-products" class="category-item active" data-category="mobile-products" aria-controls="mobile-products" aria-current="page">
+               <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>Mobiles</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+            <a href="#laptop-products" class="category-item" data-category="laptop-products" aria-controls="laptop-products">
+              <i class="fa-solid fa-laptop"></i>
+                <span>Laptops</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+            <a href="#headphone-products" class="category-item" data-category="headphone-products">
+               <i class="fa-solid fa-headphones"></i>
+                <span>Headphones</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+                <a href="#SmartWatches-products" class="category-item" data-category="SmartWatches-products">
+                <i class="fa-solid fa-clock"></i>
+                <span>Smart Watches</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+                <a href="#Fashion-products" class="category-item" data-category="Fashion-products">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Fashion</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+                 <a href="#Footwear-products" class="category-item" data-category="Footwear-products">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>Footwear</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+                <a href="#HomeLiving-products" class="category-item" data-category="HomeLiving-products">
+                <i class="fa-solid fa-house"></i>
+                <span>Home & Living</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Category Item -->
+              <a href="#Beauty-products" class="category-item" data-category="Beauty-products">
+               <img width="25" height="25" style="filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(130deg) brightness(105%);" src="https://img.icons8.com/ios-glyphs/60/shaving-cream.png" alt="shaving-cream" class="__web-inspector-hide-shortcut__">
+                <span>Beauty</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+            <!-- Category Item -->
+                 <a href="#Sports-products" class="category-item" data-category="Sports-products">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Sports</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+                        <!-- Category Item -->
+                <a href="#Sports-products" class="category-item" data-category="Sports-products">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Game</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="category-item">
+                <i class="fa-solid fa-tv"></i>
+                <span>TV & Appliances</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Category Item -->
+            <a href="#" class="category-item">
+               <i class="fa-solid fa-robot"></i>
+                <span>Electronics</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Category Item -->
+            <a href="#" class="category-item">
+               <i class="fa-solid fa-puzzle-piece"></i>
+                <span>Toys</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+
+            <!-- Category Item -->
+            <a href="#" class="category-item">
+                <i class="fa-solid fa-book"></i>
+                <span>Books & Stationery</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+        </aside>
+                 <main class="product-main" id="mobile-products" data-product-panel="mobile">
+            <section class="product-results" aria-labelledby="results-heading">
+                <div class="product-grid" aria-label="Redmi phone color options">
+                    <article class="quick-product">
+                        <div class="quick-product-image">
+                            <img src="E-iamgeitem/All_ItemIamge/note-17-pro-5g-2607dra18i-redmi-original-imahrcfjpyf7bcbx.webp" alt="Redmi Note 17 Pro 5G in Stealth Black">
+                        </div>
+                        <div class="quick-product-info">
+                            <h2>Redmi Note 17 Pro 5G (Stealth Black, 8GB RAM, 128GB ROM)</h2>
+                            <p class="rating">4.1 <span aria-label="4 out of 5 stars">★★★★<span class="muted-star">★</span></span> <small>(24)</small></p>
+                            <span class="festival-badge">Great Indian Festival</span>
+                            <p class="quick-price"><span>-26%</span> ₹36,998<sup>00</sup></p>
+                            <p class="mrp">M.R.P.: <s>₹49,999</s></p>
+                        </div>
+                    </article>
+
+                    <article class="quick-product">
+                        <div class="quick-product-image">
+                            <img src="E-iamgeitem/All_ItemIamge/note-17-pro-5g-2607dra18i-redmi-original-imahrby9xgccasgv.webp" alt="Redmi Note 17 Pro 5G in Cloud Blue">
+                        </div>
+                        <div class="quick-product-info">
+                            <h2>Redmi Note 17 Pro 5G (Cloud Blue, 8GB RAM, 128GB ROM)</h2>
+                            <p class="rating">4.1 <span aria-label="4 out of 5 stars">★★★★<span class="muted-star">★</span></span> <small>(24)</small></p>
+                            <span class="festival-badge">Great Indian Festival</span>
+                            <p class="quick-price"><span>-26%</span> ₹36,998<sup>00</sup></p>
+                            <p class="mrp">M.R.P.: <s>₹49,999</s></p>
+                        </div>
+                    </article>
+
+                    <article class="quick-product">
+                        <div class="quick-product-image">
+                            <img src="E-iamgeitem/All_ItemIamge/note-17-pro-5g-2607dra18i-redmi-original-imahrbyzaxgtad9x.webp" alt="Redmi Note 17 Pro 5G in Purple Vibe">
+                        </div>
+                        <div class="quick-product-info">
+                            <h2>Redmi Note 17 Pro 5G (Purple Vibe, 8GB RAM, 128GB ROM)</h2>
+                            <p class="rating">4.1 <span aria-label="4 out of 5 stars">★★★★<span class="muted-star">★</span></span> <small>(24)</small></p>
+                            <span class="festival-badge">Great Indian Festival</span>
+                            <p class="quick-price"><span>-26%</span> ₹36,998<sup>00</sup></p>
+                            <p class="mrp">M.R.P.: <s>₹49,999</s></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="results-heading">
+                    <h1 id="results-heading">Results</h1>
+                    <p>Check each product page for other buying options.</p>
+                </div>
+<!---------------------------------------------------------------- prodect 1 ------------------------------------------------------------------------>
+
+                <article class="featured-product">
+                    <div class="featured-product-image">
+                        <img src="E-iamgeitem/All_ItemIamge/vivo V80 5G Stellar Black, 8GB RAM, 128GB Storage.webp" alt="vivo V80 5G in Stellar Black">
+                    </div>
+                    <div class="featured-product-info">
+                        <p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p>
+                        <h3 style="margin-bottom:3px; color:orangered;">Vivo</h3>
+                        <h2>vivo V80 5G (Stellar Black, 8GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers</h2>
+                        <span class="festival-badge">Great Indian Festival</span>
+                        <p class="featured-price">₹62,999 <span>M.R.P.: <s>₹1,11,999</s></span> <b>(44% off)</b></p>
+                        <p class="emi-copy">Save extra with No Cost EMI</p>
+                        <p class="delivery-copy">FREE delivery <strong>14 - 22 Oct</strong></p>
+                        <p class="release-copy">This item will be released on October 13, 2026.</p>
+                        <button class="add-to-cart" type="button">Add to cart</button>
+                        <a class="color-options" href="#">+2 other colors/patterns</a>
+                    </div>
+                </article>
+
+<!---------------------------------------------------------------- prodect 2 ------------------------------------------------------------------------>
+
+                  <article class="featured-product">
+                    <div class="featured-product-image">
+                        <img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy A56 5G Mobile.webp" alt="vivo V80 5G in Stellar Black">
+                    </div>
+                    <div class="featured-product-info">
+                        <p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p>
+                        <h3 style="margin-bottom:3px; color:orangered;">Samsung</h3>
+                        <h2>Samsung Galaxy A56 5G Mobile (Awesome Midnight Blue, 8GB, 128GB) | Segment Most Complete Triple Camera | 50MP | AI Editing | 4nm Processor | sAMOLED | 5000mAh | Gorilla Glass Victus+| Knox Security</h2>
+                        <div class="rating">
+  <span class="stars">★★★★★</span>
+  <span>4.5 (764)</span>
+  <!-- <span style="color:silver; font-weight:200; letter-spacing:1px; font-family:'Times New Roman', Times, serif;">500+ bought in past month</span> -->
+</div>
+  <span style="color:rgb(225, 225, 225); font-weight:100; letter-spacing:1px; font-family:Arial, Helvetica, sans-serif; display:flex; margin-bottom:5px; font-size:12px;">500+ bought in past month</span>
+                        <span class="festival-badge">Great Indian Festival</span>
+                        <p class="featured-price">₹31,999 <span>M.R.P.: <s>₹49,999</s></span> <b>(36% off)</b></p>
+                        <p class="emi-copy">Save extra with No Cost EMI</p>
+                        <p class="delivery-copy">FREE delivery <strong>Sat, 10 Oct</strong></p>
+                        <p class="release-copy">Or fastest delivery Tomorrow 8 am - 12 pm</p>
+                        <button class="add-to-cart" type="button">Add to cart</button>
+                        <a class="color-options" href="#">+2 other colors/patterns</a>
+                    </div>
+                </article>
+
+<!---------------------------------------------------------------- prodect 3 ------------------------------------------------------------------------>
+                
+   <article class="featured-product">
+                    <div class="featured-product-image">
+                        <img src="E-iamgeitem/All_ItemIamge/OnePlusN6 Lite.webp" alt="vivo V80 5G in Stellar Black">
+                    </div>
+                    <div class="featured-product-info">
+                        <p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p>
+                        <h3 style="margin-bottom:3px; color:orangered;">OnePlus</h3>
+                        <h2>OnePlus N6 Lite | 4GB+64GB | Neo Green | Massive 7000mAh Long-Lasting Battery | 120Hz Ultra Smooth Display | 36 Months Fast & Smooth | Military-Grade Durability</h2>
+                        <div class="rating">
+  <span class="stars">★★★★★</span>
+  <span>3.8 (43)</span>
+  <!-- <span style="color:silver; font-weight:200; letter-spacing:1px; font-family:'Times New Roman', Times, serif;">500+ bought in past month</span> -->
+</div>
+  <span style="color:rgb(225, 225, 225); font-weight:100; letter-spacing:1px; font-family:Arial, Helvetica, sans-serif; display:flex; margin-bottom:5px; font-size:12px;">500+ bought in past month</span>
+                        <span class="festival-badge">Great Indian Festival</span>
+                        <p class="featured-price">₹15,999 <span>M.R.P.: <s>₹24,999</s></span> <b>(36% off)</b></p>
+                        <p class="emi-copy">Save extra with No Cost EMI</p>
+                        <p class="delivery-copy">FREE delivery <strong>Sat, 13 Oct</strong></p>
+                        <p class="release-copy">Up to 5% back with Amazon Pay ICICI card</p>
+                        <button class="add-to-cart" type="button">Add to cart</button>
+                        <a class="color-options" href="#">+2 other colors/patterns</a>
+                    </div>
+                </article>
+<!---------------------------------------------------------------- prodect 4 ------------------------------------------------------------------------>
+<article class="featured-product">
+                    <div class="featured-product-image">
+                        <img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy M17e 5G Mobile.webp" alt="vivo V80 5G in Stellar Black">
+                    </div>
+                    <div class="featured-product-info">
+                        <p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p>
+                        <h3 style="margin-bottom:3px; color:orangered;">Samsung</h3>
+                        <h2>Samsung Galaxy M17e 5G Mobile (Vibe Violet, 6GB RAM, 128GB Storage, Monster 6000mAh Battery) | 120 Hz Refresh Rate | IP54 Rating | 6 Gen OS Upgrades | 50MP Dual Camera | Knox Security | AI</h2>
+                        <div class="rating">
+  <span class="stars">★★★★★</span>
+  <span>4.1 (1.2k)</span>
+  <!-- <span style="color:silver; font-weight:200; letter-spacing:1px; font-family:'Times New Roman', Times, serif;">500+ bought in past month</span> -->
+</div>
+  <span style="color:rgb(225, 225, 225); font-weight:100; letter-spacing:1px; font-family:Arial, Helvetica, sans-serif; display:flex; margin-bottom:5px; font-size:12px;">500+ bought in past month</span>
+                        <span class="festival-badge">Great Indian Festival</span>
+                        <p class="featured-price">₹19,999</p>
+                        <p class="emi-copy">Save extra with No Cost EMI</p>
+                        <p class="delivery-copy">FREE delivery <strong>Mon, 12 Oct<br>Or fastest delivery Tomorrow by 8 am</strong></p>
+                        <!-- <p><strong></strong>Or fastest delivery Tomorrow by 8 am</p> -->
+                        <p class="release-copy">Up to 5% back with Amazon Pay ICICI card</p>
+                        <button class="add-to-cart" type="button">Add to cart</button>
+                        <a class="color-options" href="#">+2 other colors/patterns</a>
+                    </div>
+                </article>
+<!---------------------------------------------------------------- prodect 5 ------------------------------------------------------------------------>
+<article class="featured-product">
+                    <div class="featured-product-image">
+                        <img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy S25 Ultra 5G AI Smartphone.webp" alt="vivo V80 5G in Stellar Black">
+                    </div>
+                    <div class="featured-product-info">
+                        <p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p>
+                        <h3 style="margin-bottom:3px; color:orangered;">Samsung</h3>
+                        <h2>
+Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Whitesilver, 12GB RAM, 512GB Storage), 200MP Camera, 5000mAh Ultra Long Battery, QHD+ Dynamic AMOLED 2X, Galaxy AI, Knox Security, S Pen Included</h2>
+                        <div class="rating">
+  <span class="stars">★★★★★</span>
+  <span>4.5 (2.8k)</span>
+  <!-- <span style="color:silver; font-weight:200; letter-spacing:1px; font-family:'Times New Roman', Times, serif;">500+ bought in past month</span> -->
+</div>
+  <span style="color:rgb(225, 225, 225); font-weight:100; letter-spacing:1px; font-family:Arial, Helvetica, sans-serif; display:flex; margin-bottom:5px; font-size:12px;">500+ bought in past month</span>
+                        <span class="festival-badge">Great Indian Festival</span>
+                        <p class="featured-price">₹1,09,999 <span>M.R.P.: <s>₹1,41,999</s></span> <b>(23% off)</b></p>
+                       <p style="font-size:14.5px; margin-top:5px;"><mark style="margin-right:3px; background-color:lime; font-size:15px; padding:2px;">You pay ₹99,999 </mark> with coupon</p>
+                        <!-- <p class="emi-copy">Save extra with No Cost EMI</p> -->
+                        <p class="delivery-copy">FREE delivery <strong>Mon, 12 Oct</strong></p>
+                        <p style="color:rgb(224, 224, 224); font-size:14px;">Or fastest delivery <strong style="color:#ffffff;">Tomorrow by 8 am</strong></p>
+                        <p class="release-copy">Up to 5% back with Amazon Pay ICICI card</p>
+                        <button class="add-to-cart" type="button">Add to cart</button>
+                        <a class="color-options" href="#">+2 other colors/patterns</a>
+                    </div>
+                </article>
+<!---------------------------------------------------------------- prodect 6 ------------------------------------------------------------------------>
+<article class="featured-product">
+                    <div class="featured-product-image">
+                        <img src="E-iamgeitem/All_ItemIamge/OnePlus N6x.webp" alt="vivo V80 5G in Stellar Black">
+                    </div>
+                    <div class="featured-product-info">
+                        <p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p>
+                        <h3 style="margin-bottom:3px; color:orangered;">OnePlus</h3>
+                        <h2>
+OnePlus N6x | 4GB+64GB | Burgundy Red | 7000mAh Battery | Power for Days | 36-Months Smoothness | Smooth 120Hz Display | Largest 5300mm2 Cooling System | Military-Grade Durability</h2>
+                        <div class="rating">
+  <span class="stars">★★★★★</span>
+  <span>3.6 (141)</span>
+  <!-- <span style="color:silver; font-weight:200; letter-spacing:1px; font-family:'Times New Roman', Times, serif;">500+ bought in past month</span> -->
+</div>
+  <span style="color:rgb(225, 225, 225); font-weight:100; letter-spacing:1px; font-family:Arial, Helvetica, sans-serif; display:flex; margin-bottom:5px; font-size:12px;">1K+ bought in past month</span>
+                        <span class="festival-badge">Mega Festival Deal</span>
+                        <p class="featured-price">₹18,499 <span>M.R.P.: <s>₹26,999</s></span> <b>(31% off)</b></p>
+                       <!-- <p style="font-size:14.5px; margin-top:5px;"><mark style="margin-right:3px; background-color:lime; font-size:15px; padding:2px;">You pay ₹99,999 </mark> with coupon</p> -->
+                        <!-- <p class="emi-copy">Save extra with No Cost EMI</p> -->
+                        <p class="delivery-copy">FREE delivery <strong>Mon, 12 Oct</strong></p>
+                        <p style="color:rgb(224, 224, 224); font-size:14px;">Or fastest delivery <strong style="color:#ffffff;">Tomorrow by 8 am</strong></p>
+                        <!-- <p class="release-copy">Up to 5% back with Amazon Pay ICICI card</p> -->
+                        <button class="add-to-cart" type="button">Add to cart</button>
+                        <a class="color-options" href="#">+2 other colors/patterns</a>
+                    </div>
+                </article>
+<!-- Product 1: Redmi A7 Pro 5G -->
+<article class="featured-product">
+    <div class="featured-product-image">
+        <img src="E-iamgeitem/All_ItemIamge/Redmi A7 Pro 5G.webp"
+             alt="Redmi A7 Pro 5G Mist Blue">
+    </div>
+
+    <div class="featured-product-info">
+        <h2>
+            REDMI A7 Pro 5G (Mist Blue, 4GB RAM, 64GB Storage)
+            | Segment's Fastest Processor | Segment's Largest Battery
+            | Segment's Largest & Smoothest 6.9in 120Hz Display
+        </h2>
+
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span>3.5</span>
+            <span>(2.8K)</span>
+        </div>
+
+        <span class="bought">1K+ bought in past month</span><br>
+        <p class="festival-badge" style="margin-top:5px;">Great Indian Festival</p>
+
+        <p class="featured-price">
+            ₹14,497
+            <span>M.R.P.: <s>₹26,999</s></span>
+            <b>(46% off)</b>
+        </p>
+
+        <p class="emi-copy">
+            Up to 5% back with Amazon Pay ICICI card...
+        </p>
+
+        <p class="delivery-copy">
+            FREE delivery <strong>Mon, 12 Oct</strong>
+        </p>
+
+        <p class="delivery-copy">
+            Or fastest delivery <strong>Tomorrow by 8am</strong>
+        </p>
+
+        <button class="add-to-cart" type="button">Add to cart</button>
+
+        <div class="product-colors">
+            <span class="color-circle" style="background:#aab5c1;"></span>
+            <span class="color-circle" style="background:#292929;"></span>
+            <span class="color-circle" style="background:#d98b68;"></span>
+        </div>
+    </div>
+</article>
+
+
+<!-- Product 2: OnePlus Nord 6 -->
+<article class="featured-product">
+    <div class="featured-product-image">
+        <img src="E-iamgeitem/All_ItemIamge/OnePlus Nord 6.webp"
+             alt="OnePlus Nord 6 Quick Silver">
+    </div>
+
+    <div class="featured-product-info">
+        <h2>
+            OnePlus Nord 6 | 8GB+256GB | Quick Silver
+            | Snapdragon 8s Gen 4 | Segment's First Stable 165FPS Gaming
+            | Segment's Largest 9000mAh Battery
+            | Most Complete IP Rating | Personalized AI
+        </h2>
+
+        <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span>4.4</span>
+            <span>(2.5K)</span>
+        </div>
+
+        <span class="bought">500+ bought in past month</span><br>
+        <span class="festival-badge" style="margin-top:5px;">Mega Festival Deal</span>
+
+        <p class="featured-price">
+            ₹44,999
+            <span>M.R.P.: <s>₹52,999</s></span>
+            <b>(15% off)</b>
+        </p>
+
+        <p class="emi-copy">Save extra with No Cost EMI</p>
+
+        <p class="delivery-copy">
+            FREE delivery <strong>Mon, 12 Oct</strong>
+        </p>
+
+        <p class="delivery-copy">
+            Or fastest delivery <strong>Tomorrow by 8am</strong>
+        </p>
+
+        <button class="add-to-cart" type="button">Add to cart</button>
+
+        <div class="product-colors">
+            <span class="color-circle" style="background:#b9b9b9;"></span>
+            <span class="color-circle" style="background:#b8d7ce;"></span>
+            <span class="color-circle" style="background:#292929;"></span>
+        </div>
+    </div>
+</article>
+
+
+<!-- Product 3: Lava Bold N4 Lite -->
+<article class="featured-product">
+    <div class="featured-product-image">
+        <img src="E-iamgeitem/All_ItemIamge/Lava Bold N4 Lite.webp"
+             alt="Lava Bold N4 Lite Ghost Silver">
+    </div>
+
+    <div class="featured-product-info">
+        <h2>
+            Lava Bold N4 Lite (Ghost Silver, 3GB RAM, 32GB Storage)
+            | 6.56" qHD Display | 8MP Rear Camera
+            | 5000 mAh Battery | Free Service @ Home
+            | Fingerprint Reader | Charger & Phone-Cover in Box
+        </h2>
+
+        <div class="rating">
+            <span class="stars">★★★☆☆</span>
+            <span>3.4</span>
+            <span>(69)</span>
+        </div>
+
+        <span class="bought">3K+ bought in past month</span>
+
+        <p class="featured-price">
+            ₹8,399
+            <span>M.R.P.: <s>₹9,999</s></span>
+            <b>(16% off)</b>
+        </p>
+
+        <p class="emi-copy">
+            Up to 5% back with Amazon Pay ICICI card...
+        </p>
+
+        <p class="delivery-copy">
+            FREE delivery <strong>Mon, 12 Oct</strong>
+        </p>
+
+        <p class="delivery-copy">
+            Or fastest delivery <strong>Tomorrow by 8am</strong>
+        </p>
+
+        <button class="add-to-cart" type="button">Add to cart</button>
+
+        <div class="product-colors">
+            <span class="color-circle" style="background:#55595a;"></span>
+            <span class="color-circle" style="background:#c3b4a9;"></span>
+        </div>
+    </div>
+</article>
+
+
+<!-- Product 4: OnePlus N6 -->
+<article class="featured-product">
+    <div class="featured-product-image">
+        <img src="E-iamgeitem/All_ItemIamge/OnePlus N62.webp"
+             alt="OnePlus N6 Midnight Green">
+    </div>
+
+    <div class="featured-product-info">
+        <h2>
+            OnePlus N6 | 4GB+128GB | Midnight Green
+            | Segment's Biggest 8000mAh Battery
+            | Segment's Fastest 45W Charging
+            | 48-Month Smoothness | Smooth 120Hz Display
+            | 50MP Camera | Military-Grade Durability
+        </h2>
+
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span>3.6</span>
+            <span>(571)</span>
+        </div>
+
+        <span class="bought">500+ bought in past month</span><br>
+
+        <span class="festival-badge" style="margin-top:5px;">Mega Festival Deal</span>
+
+        <p class="featured-price">
+            ₹23,499
+            <span>M.R.P.: <s>₹30,999</s></span>
+            <b>(24% off)</b>
+        </p>
+
+        <p class="delivery-copy">
+            FREE delivery <strong>Mon, 12 Oct</strong>
+        </p>
+
+        <p class="delivery-copy">
+            Or fastest delivery <strong>Tomorrow by 8am</strong>
+        </p>
+
+        <button class="add-to-cart" type="button">Add to cart</button>
+
+        <div class="product-colors">
+            <span class="color-circle" style="background:#414844;"></span>
+            <span class="color-circle" style="background:#b7d4d0;"></span>
+        </div>
+    </div>
+</article>
+
+
+<!-- Product 5: iQOO Z11 Lite -->
+<article class="featured-product">
+    <div class="featured-product-image">
+        <img src="E-iamgeitem/All_ItemIamge/iQOO Z11 Lite.webp"
+             alt="iQOO Z11 Lite Midnight Blue">
+    </div>
+
+    <div class="featured-product-info">
+        <h2>
+            iQOO Z11 Lite 44W 5G (Midnight Blue, 4GB RAM, 64GB Storage)
+        </h2>
+
+        <div class="rating">
+            <span class="stars">★★☆☆☆</span>
+            <span>2.5</span>
+            <span>(5)</span>
+        </div>
+
+        <p class="featured-price">
+            ₹17,499
+            <span>M.R.P.: <s>₹30,999</s></span>
+            <b>(44% off)</b>
+        </p>
+
+        <p style="font-size:14px; margin-top:5px;">
+            <mark style="background-color:lime; padding:2px 4px;">
+                You pay ₹15,499
+            </mark>
+            with coupon
+        </p>
+
+        <p class="delivery-copy">
+            FREE delivery <strong>Mon, 12 Oct</strong>
+        </p>
+
+        <p class="delivery-copy">
+            Or fastest delivery <strong>Tomorrow by 8am</strong>
+        </p>
+
+        <button class="add-to-cart" type="button">Add to cart</button>
+
+        <div class="product-colors">
+            <span class="color-circle" style="background:#333344;"></span>
+            <span class="color-circle" style="background:#c4bdb4;"></span>
+        </div>
+    </div>
+</article>
+
+
+<!-- Product 6: Lava Bold N2 -->
+<article class="featured-product">
+    <div class="featured-product-image">
+        <img src="E-iamgeitem/All_ItemIamge/Lava Bold N2.webp"
+             alt="Lava Bold N2 Indus Black">
+    </div>
+
+    <div class="featured-product-info">
+        <h2>
+            Lava Bold N2 (Indus Black, 4 GB RAM, 64 GB Storage)
+            | 13MP AI Dual Rear Camera | Largest 6.75" HD+ Display
+            | 5000 mAh Battery & 10W Charging
+            | IP64 Water & Dust Proof | Charger & Phone-Case in Box
+        </h2>
+
+        <p class="featured-price">
+            ₹9,699
+            <span>M.R.P.: <s>₹12,999</s></span>
+            <b>(25% off)</b>
+        </p>
+
+        <p class="emi-copy">
+            Up to 5% back with Amazon Pay ICICI card...
+        </p>
+
+        <p class="delivery-copy">
+            FREE delivery <strong>Mon, 12 Oct</strong>
+        </p>
+
+        <p class="delivery-copy">
+            Or fastest delivery <strong>Tomorrow by 8am</strong>
+        </p>
+
+        <button class="add-to-cart" type="button">Add to cart</button>
+
+        <div class="product-colors">
+            <span class="color-circle" style="background:#333333;"></span>
+            <span class="color-circle" style="background:#c5c5c5;"></span>
+        </div>
+    </div>
+</article>
+<!-- Product 6: Lava Bold N2 --End -->
+
+<!-- Galaxy A56 - 50MP Triple CameraGalaxy A56 - 50MP Triple Camera -->
+<div id="samsungBrandSection_01" class="samsungBrandWrapper_01">
+    <div class="samsungBrandLayout_01">
+        <div class="samsungBrandLogoBox_01">
+            <a href="####" class="samsungBrandLogoLink_01"><img id="samsungBrandLogoImg_01" class="samsungBrandLogoImage_01" src="E-iamgeitem/All_ItemIamge/SamsungLogoPng.png" alt="Samsung Log"></a>
+        </div>
+        <div id="samsungBrandInfo_01" class="samsungBrandContent_01">
+            <h3 id="samsungBrandTitle_01" class="samsungBrandHeading_01"> Galaxy A56 - 50MP Triple Camera </h3>
+            <div class="samsungBrandMetaRow_01"> <span class="samsungBrandSponsored_01"> Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></span>
+                <div class="samsungBrandDetails_01"><span class="samsungBrandSeparator_01">|</span><span class="samsungBrandCategoryText_01">Top 10 best-selling brand in this category</span>
+                    <span class="samsungBrandSeparator_01">|</span><a href="####" class="samsungBrandShopLink_01">Shop Samsung<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid-samsungMobile-tamplate">
+<article class="card"><div class="photo"><img src="E-iamgeitem/All_ItemIamge/product1.png" alt="Galaxy A56 5G in Awesome Midnight Blue"></div><div class="info"><h4 class="title">Samsung Galaxy A56 5G Mobile (Awesome Midnight Blue, 8GB, 128GB) | Segment Most Complete Triple Camera</h4><div class="rating">4.4 <span class="stars">★★★★☆</span> <span class="count">791</span></div><div class="price">₹32,999<sup>00</sup></div><div class="mrp">M.R.P.: <s>₹49,999.00</s></div></div></article>
+<article class="card"><div class="photo"><img src="E-iamgeitem/All_ItemIamge/product2.png" alt="Galaxy A56 5G in Awesome Midnight Blue"></div><div class="info"><h4 class="title">Samsung Galaxy A56 5G Mobile (Awesome Midnight Blue, 8GB, 256GB) | Segment Most Complete Triple Camera</h4><div class="rating">4.4 <span class="stars">★★★★☆</span> <span class="count">787</span></div><div class="festival">Great Indian Festival</div><div class="price"><span class="discount">-30%</span>₹36,999<sup>00</sup></div><div class="mrp">M.R.P.: <s>₹52,999.00</s></div></div></article>
+<article class="card"><div class="photo"><img src="E-iamgeitem/All_ItemIamge/product3.png" alt="Galaxy A56 5G in Awesome Violet Glow"></div><div class="info"><h4 class="title">Samsung Galaxy A56 5G Mobile (Awesome Violet Glow, 8GB, 128GB) | Segment Most Complete Triple Camera</h4><div class="rating">4.4 <span class="stars">★★★★☆</span> <span class="count">791</span></div><div class="festival">Great Indian Festival</div><div class="price"><span class="discount">-34%</span>₹32,999<sup>00</sup></div><div class="mrp">M.R.P.: <s>₹49,999.00</s></div></div></article>
+<article class="card"><div class="photo"><img src="E-iamgeitem/All_ItemIamge/product4.png" alt="Galaxy A56 5G in Awesome Violet Glow"></div><div class="info"><h4 class="title">Samsung Galaxy A56 5G Mobile (Awesome Violet Glow, 8GB, 256GB) | Segment Most Complete Triple Camera</h4><div class="rating">4.4 <span class="stars">★★★★☆</span> <span class="count">787</span></div><div class="price">₹36,999<sup>00</sup></div><div class="mrp">M.R.P.: <s>₹52,999.00</s></div></div></article>
+</div>
+<div class="samsun_ProductMobileBrad_highPrice">
+<h2>More results</h2>
+<p style="margin:0px 5px 5px 5px; position: relative; bottom:5px; color:silver; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Check each product page for other buying options.</p>
+<div class="product-list">
+
+    <!-- PRODUCT 1 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Lavender 1TB.webp"
+                alt="Samsung Galaxy Z Fold8 Lavender"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h1>
+
+            <p>
+                Galaxy Z Fold8 5G Smartphone with Galaxy AI
+                (Lavender, 16GB RAM, 1TB Storage) +
+                Samsung Care Services Damage Protection Plan for 1 Year
+            </p>
+
+            <p class="featured-price">
+                ₹2,42,998
+                <span>List: <s>₹2,80,997</s></span>
+                <b>(14% off)</b>
+            </p>
+
+            <p class="emi-copy">
+                Up to 5% back with Amazon Pay ICICI...
+            </p>
+
+            <p class="delivery-copy">
+                Delivery <strong>Thu, 15 Oct</strong>
+            </p>
+
+            <p class="stock-copy">Only 2 left in stock.</p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#c5b8d9;"></span>
+                <span class="color-circle" style="background:#333333;"></span>
+                <span class="color-circle" style="background:#f5f1eb;"></span>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- PRODUCT 2 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Lavender 1TB.webp"
+                alt="Samsung Galaxy Z Fold8 Lavender 16GB RAM 1TB"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h2>
+
+            <p>
+                Galaxy Z Fold8 5G Smartphone with Galaxy AI
+                (Lavender, 16GB RAM, 1TB Storage), All New Shape,
+                Snapdragon 8 Elite Gen 5, 4800mAh Battery,
+                Dual 50MP Camera, Now Nudge, Photo Assist
+            </p>
+
+            <p class="rating-copy">
+                4.7 <span>★★★★☆</span> (37)
+            </p>
+
+            <span class="festival-label">Great Indian Festival</span>
+
+            <p class="featured-price">
+                ₹2,34,999
+                <span>M.R.P.: <s>₹2,64,999</s></span>
+                <b>(11% off)</b>
+            </p>
+
+            <p class="emi-copy">Save extra with No Cost EMI</p>
+
+            <p class="delivery-copy">
+                FREE delivery <strong>Tue, 13 Oct</strong>
+            </p>
+
+            <p class="stock-copy">Only 2 left in stock.</p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#c5b8d9;"></span>
+                <span class="color-circle" style="background:#333333;"></span>
+                <span class="color-circle" style="background:#f5f1eb;"></span>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- PRODUCT 3 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Lavender 1TB_dark.webp"
+                alt="Samsung Galaxy Z Fold8 Ultra Graphite"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h1>
+
+            <p>
+                Galaxy Z Fold8 Ultra 5G Smartphone with Galaxy AI
+                (Graphite, 12GB RAM, 512GB Storage) +
+                Samsung Care Services Damage Protection Plan for 1 Year
+            </p>
+
+            <p class="featured-price">
+                ₹2,22,998
+                <span>List: <s>₹2,60,997</s></span>
+                <b>(15% off)</b>
+            </p>
+
+            <p class="emi-copy">
+                Up to 5% back with Amazon Pay ICICI...
+            </p>
+
+            <p class="delivery-copy">
+                Delivery <strong>Thu, 15 Oct</strong>
+            </p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#333333;"></span>
+                <span class="color-circle" style="background:#c5c5c5;"></span>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- PRODUCT 4 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Ultra Graphite 512GB.webp"
+                alt="Samsung Galaxy Z Fold8 Ultra Cream"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h2>
+
+            <p>
+                Galaxy Z Fold8 Ultra 5G Smartphone with Galaxy AI
+                (Cream, 12GB RAM, 512GB Storage) +
+                Samsung Care Services Damage Protection Plan for 1 Year
+            </p>
+
+            <p class="featured-price">
+                ₹2,22,998
+                <span>M.R.P.: <s>₹2,40,997</s></span>
+                <b>(7% off)</b>
+            </p>
+
+            <p class="emi-copy">
+                Up to 5% back with Amazon Pay ICICI...
+            </p>
+
+            <p class="delivery-copy">
+                Delivery <strong>Thu, 15 Oct</strong>
+            </p>
+
+            <p class="stock-copy">Only 2 left in stock.</p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#e8e0d7;"></span>
+                <span class="color-circle" style="background:#333333;"></span>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- PRODUCT 5 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Ultra Cream 512GB.webp"
+                alt="Samsung Galaxy Z Fold8 Ultra Graphite 12GB RAM 512GB"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h1>
+
+            <p>
+                Galaxy Z Fold8 Ultra 5G Smartphone with Galaxy AI
+                (Graphite, 12GB RAM, 512GB Storage),
+                Snapdragon 8 Elite Gen 5, 5000mAh Battery,
+                200MP Camera, Now Nudge, Photo Assist
+            </p>
+
+            <p class="rating-copy">
+                4.4 <span>★★★★☆</span> (36)
+            </p>
+
+            <span class="festival-label">Great Indian Festival</span>
+
+            <p class="featured-price">
+                ₹2,14,999
+                <span>M.R.P.: <s>₹2,44,999</s></span>
+                <b>(12% off)</b>
+            </p>
+
+            <p class="emi-copy">Save extra with No Cost EMI</p>
+
+            <p class="delivery-copy">
+                FREE delivery <strong>Wed, 14 Oct</strong>
+            </p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#333333;"></span>
+                <span class="color-circle" style="background:#c5c5c5;"></span>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- PRODUCT 6 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Ultra Graphite 512GB.webp"
+                alt="Samsung Galaxy Z Fold8 Ultra Cream 12GB RAM 512GB"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h1>
+
+            <p>
+                Galaxy Z Fold8 Ultra 5G Smartphone with Galaxy AI
+                (Cream, 12GB RAM, 512GB Storage),
+                Snapdragon 8 Elite Gen 5, 5000mAh Battery,
+                200MP Camera, Now Nudge, Photo Assist
+            </p>
+
+            <p class="rating-copy">
+                4.4 <span>★★★★☆</span> (36)
+            </p>
+
+            <span class="festival-label">Great Indian Festival</span>
+
+            <p class="featured-price">
+                ₹2,14,999
+                <span>M.R.P.: <s>₹2,24,999</s></span>
+                <b>(4% off)</b>
+            </p>
+
+            <p class="emi-copy">Save extra with No Cost EMI</p>
+
+            <p class="delivery-copy">
+                FREE delivery <strong>Tue, 13 Oct</strong>
+            </p>
+
+            <p class="stock-copy">Only 2 left in stock.</p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#e8e0d7;"></span>
+                <span class="color-circle" style="background:#333333;"></span>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- PRODUCT 7 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Lavender 1TB_dark.webp"
+                alt="Samsung Galaxy Z Fold8 Graphite 12GB RAM 512GB"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h1>
+
+            <p>
+                Galaxy Z Fold8 5G Smartphone with Galaxy AI
+                (Graphite, 12GB RAM, 512GB Storage) +
+                Samsung Care Services Damage Protection Plan for 1 Year
+            </p>
+
+            <p class="featured-price">
+                ₹2,02,998
+                <span>List: <s>₹2,40,997</s></span>
+                <b>(16% off)</b>
+            </p>
+
+            <p class="emi-copy">
+                Up to 5% back with Amazon Pay ICICI...
+            </p>
+
+            <p class="delivery-copy">
+                Delivery <strong>Thu, 15 Oct</strong>
+            </p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+
+            <div class="product-colors">
+                <span class="color-circle" style="background:#333333;"></span>
+                <span class="color-circle" style="background:#c5b8d9;"></span>
+                <span class="color-circle" style="background:#f5f1eb;"></span>
+            </div>
+
+        </div>
+    </article>
+    <!-- Galaxy S25 Ultra - AI ProVisual Engine -->
+<div id="samsungBrandSection_01" class="samsungBrandWrapper_01">
+    <div class="samsungBrandLayout_01">
+        <div class="samsungBrandLogoBox_01">
+            <a href="####" class="samsungBrandLogoLink_01"><img id="samsungBrandLogoImg_01" class="samsungBrandLogoImage_01" src="E-iamgeitem/All_ItemIamge/SamsungLogoPng.png" alt="Samsung Log"></a>
+        </div>
+        <div id="samsungBrandInfo_01" class="samsungBrandContent_01">
+            <h3 id="samsungBrandTitle_01" class="samsungBrandHeading_01"> Galaxy S25 Ultra - AI ProVisual Engine </h3>
+            <div class="samsungBrandMetaRow_01"> <span class="samsungBrandSponsored_01"> Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></span>
+                <div class="samsungBrandDetails_01"><span class="samsungBrandSeparator_01">|</span><span class="samsungBrandCategoryText_01">Top 10 best-selling brand in this category</span>
+                    <span class="samsungBrandSeparator_01">|</span><a href="####" class="samsungBrandShopLink_01">Shop Samsung<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="grid-samsungMobile-tamplate"><article class="card"><span class="badge">Best seller</span><div class="photo"><img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy S25 Ultra 5G AI Smartphone Titanium black.jpg" alt="Samsung Galaxy S25 Ultra Titanium Black"></div><a class="colors-link" href="#">+3 other colors/patterns</a><div class="sponsored">Sponsored ⓘ</div><div class="info"><h4>Samsung</h4><p class="title">Galaxy S25 Ultra 5G AI Smartphone (Titanium Black, 12GB RAM, 512GB Storage), 200MP Camera, 5000mAh Battery</p><div class="rating">4.5 <span class="stars">★★★★☆</span><span class="count">(2.9K)</span></div><p class="bought">1K+ bought in past month</p><div class="festival">Mega Festival Deal</div><div class="price">₹1,09,999 <small>M.R.P.: <s>₹1,41,999</s> (23% off)</small></div><p class="emi">Save extra with No Cost EMI</p><p class="delivery">FREE delivery <b>13 Oct - 1 Nov</b></p><p class="stock">Only 2 left in stock.</p><button class="cart">Add to cart</button></div></article><article class="card"><div class="photo"><img src="E-iamgeitem/All_ItemIamge/Galaxy S26 Ultra 5G Cobalt Violet.webp" alt="Samsung Galaxy S26 Ultra Cobalt Violet"></div><div class="sponsored">Sponsored ⓘ</div><div class="info"><h4>Samsung</h4><p class="title">Galaxy S26 Ultra 5G (Cobalt Violet, 12GB RAM, 256GB Storage) with Built-in Privacy Display, AI Phone</p><div class="rating">4.6 <span class="stars">★★★★☆</span><span class="count">(238)</span></div><p class="bought">300+ bought in past month</p><div class="price">₹1,39,999 <small>M.R.P.: ₹1,69,999 (18% off)</small></div><p class="emi">Save extra with No Cost EMI</p><p class="delivery">FREE delivery <b>Wed, 14 Oct</b></p><button class="cart">Add to cart</button></div></article><article class="card"><span class="badge">Best seller</span><div class="photo"><img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy S25 Ultra 5G AI Smartphone Titanium black.jpg" alt="Samsung Galaxy S25 Ultra Titanium Black"></div><div class="color-dots"><i class="active"></i><i></i><i></i><i></i></div><div class="info"><h4>Samsung</h4><p class="title">Galaxy S25 Ultra 5G AI Smartphone (Titanium Black, 12GB RAM, 256GB Storage), 200MP Camera, 5000mAh Battery</p><div class="rating">4.5 <span class="stars">★★★★☆</span><span class="count">(2.9K)</span></div><p class="bought">5K+ bought in past month</p><div class="festival">Mega Festival Deal</div><div class="price">₹94,999 <small>M.R.P.: <s>₹1,29,999</s> (27% off)</small></div><p class="coupon">You pay ₹84,999</p> <span style="font-size:13px;">with coupon</span><p class="delivery">FREE delivery <b>Tue, 13 Oct</b><br>Or fastest delivery <b>Tomorrow 8am - 12pm</b></p><button class="cart">Add to cart</button></div></article><article class="card"><span class="badge">Best seller</span><div class="photo"><img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy S25 Ultra 5G AI Smartphone Titanium Silverblue.jpg" alt="Samsung Galaxy S25 Ultra Titanium Silverblue"></div><div class="color-dots"><i class="active silver"></i><i></i><i></i><i></i></div><div class="info"><h4>Samsung</h4><p class="title">Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 256GB Storage), 200MP Camera, 5000mAh Battery</p><div class="rating">4.5 <span class="stars">★★★★☆</span><span class="count">(2.9K)</span></div><p class="bought">5K+ bought in past month</p><div class="festival">Mega Festival Deal</div><div class="price">₹94,999 <small>M.R.P.: <s>₹1,29,999</s> (27% off)</small></div><p class="coupon">You pay ₹84,999</p><span style="font-size:13px;"> with coupon</span> <p class="delivery">FREE delivery <b>Wed, 14 Oct</b></p><button class="cart">Add to cart</button></div></article></div>
+
+<div class="samsun_ProductMobileBrad_highPrice">
+<h2>More results</h2>
+<p style="margin:0px 5px 5px 5px; position: relative; bottom:5px; color:silver; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Check each product page for other buying options.</p>
+<div class="product-list">
+
+    <!-- PRODUCT 1 -->
+    <article class="featured-product">
+
+        <div class="featured-product-image">
+            <img
+                src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Z Fold8 Lavender 1TB.webp"
+                alt="Samsung Galaxy Z Fold8 Lavender"
+            >
+        </div>
+
+        <div class="featured-product-info">
+
+            <h1 id="brandColor_name">Samsung</h1>
+
+            <p>
+                Galaxy Z Fold8 5G Smartphone with Galaxy AI
+                (Lavender, 16GB RAM, 1TB Storage) +
+                Samsung Care Services Damage Protection Plan for 1 Year
+            </p>
+
+            <p class="featured-price">
+                ₹2,42,998
+                <span>List: <s>₹2,80,997</s></span>
+                <b>(14% off)</b>
+            </p>
+
+            <p class="emi-copy">
+                Up to 5% back with Amazon Pay ICICI...
+            </p>
+
+            <p class="delivery-copy">
+                Delivery <strong>Thu, 15 Oct</strong>
+            </p>
+
+            <p class="stock-copy">Only 2 left in stock.</p>
+
+            <button class="add-to-cart" type="button">
+                Add to cart
+            </button>
+        </div>
+    </article>
+            </section>
+        </main>
+
+        <!-- ================= LAPTOP PRODUCTS ================= -->
+        <main class="product-main laptop-product-main" id="laptop-products" data-product-panel="laptop" hidden>
+            <section class="product-results" aria-labelledby="laptop-results-heading">
+                <div class="laptop-category-banner">
+                    <div>
+                        <p class="laptop-eyebrow"><i class="fa-solid fa-bolt"></i> SHOPZONE LAPTOP STORE</p>
+                        <h1 id="laptop-results-heading">Laptops & Notebooks</h1>
+                        <p>Powerful performance for study, work, gaming and everyday use.</p>
+                    </div>
+                    <span class="laptop-banner-icon" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span>
+                </div>
+
+                <div class="laptop-toolbar">
+                    <span class="laptop-delivery-note"><i class="fa-solid fa-truck-fast"></i> Free delivery on eligible orders</span>
+                </div>
+
+                <div class="laptop-product-grid">
+
+                    <article class="laptop-card">
+                        <div class="laptop-card-image"><span class="laptop-tag">BEST SELLER</span><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85" alt="Slim silver laptop open on a desk" loading="lazy"></div>
+                        <div class="laptop-card-info"><p class="laptop-brand">HP</p><h2>HP 15s Laptop, Intel Core i5, 16GB RAM, 512GB SSD</h2><p class="laptop-rating"><span>★★★★☆</span> 4.3 <small>(1,284)</small></p><p class="laptop-bought">1K+ bought in past month</p><p class="laptop-price">₹54,990 <del>₹69,999</del> <b>21% off</b></p><p class="laptop-emi">No Cost EMI available</p><p class="laptop-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="laptop-cart-btn" type="button"><i class="fa-solid fa-cart-plus" style="color:#000000;"></i> Add to cart</button></div>
+                    </article>
+            
+                    <article class="laptop-card">
+                        <div class="laptop-card-image"><span class="laptop-tag laptop-tag-deal">FESTIVAL DEAL</span><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=85" alt="Apple-style aluminum notebook computer" loading="lazy"></div>
+                        <div class="laptop-card-info"><p class="laptop-brand">Apple</p><h2>MacBook Air 13-inch, Apple Silicon, 16GB Unified Memory, 256GB SSD</h2><p class="laptop-rating"><span>★★★★★</span> 4.7 <small>(862)</small></p><p class="laptop-bought">500+ bought in past month</p><p class="laptop-price">₹89,990 <del>₹99,900</del> <b>10% off</b></p><p class="laptop-emi">EMI options available</p><p class="laptop-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="laptop-cart-btn" type="button"><i class="fa-solid fa-cart-plus" style="color:#000000;"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="laptop-card">
+                        <div class="laptop-card-image"><span class="laptop-tag">STUDENT PICK</span><img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=85" alt="Laptop computer on a clean workspace" loading="lazy"></div>
+                        <div class="laptop-card-info"><p class="laptop-brand">Lenovo</p><h2>Lenovo IdeaPad Slim 3, Ryzen 5, 16GB RAM, 512GB SSD</h2><p class="laptop-rating"><span>★★★★☆</span> 4.2 <small>(746)</small></p><p class="laptop-bought">700+ bought in past month</p><p class="laptop-price">₹43,490 <del>₹59,990</del> <b>27% off</b></p><p class="laptop-emi">No Cost EMI available</p><p class="laptop-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="laptop-cart-btn" type="button"><i class="fa-solid fa-cart-plus" style="color:#000000;"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="laptop-card">
+                        <div class="laptop-card-image"><span class="laptop-tag laptop-tag-gaming">GAMING</span><img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=85" alt="Performance laptop with large display" loading="lazy"></div>
+                        <div class="laptop-card-info"><p class="laptop-brand">ASUS TUF</p><h2>ASUS TUF Gaming Laptop, Core i5, RTX Graphics, 16GB RAM, 512GB SSD</h2><p class="laptop-rating"><span>★★★★★</span> 4.4 <small>(519)</small></p><p class="laptop-bought">300+ bought in past month</p><p class="laptop-price">₹74,990 <del>₹89,990</del> <b>17% off</b></p><p class="laptop-emi">Gaming performance · EMI available</p><p class="laptop-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="laptop-cart-btn" type="button"><i class="fa-solid fa-cart-plus" style="color:#000000;"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="laptop-card">
+                        <div class="laptop-card-image"><img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=900&q=85" alt="Compact notebook computer viewed from above" loading="lazy"></div>
+                        <div class="laptop-card-info"><p class="laptop-brand">Dell</p><h2>Dell Inspiron 14, Intel Core i5, 16GB RAM, 512GB SSD</h2><p class="laptop-rating"><span>★★★★☆</span> 4.2 <small>(634)</small></p><p class="laptop-bought">400+ bought in past month</p><p class="laptop-price">₹58,490 <del>₹72,990</del> <b>20% off</b></p><p class="laptop-emi">No Cost EMI available</p><p class="laptop-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="laptop-cart-btn" type="button"><i class="fa-solid fa-cart-plus" style="color:#000000;"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="laptop-card">
+                        <div class="laptop-card-image"><span class="laptop-tag">VALUE PICK</span><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85" alt="Everyday laptop ready for work or study" loading="lazy"></div>
+                        <div class="laptop-card-info"><p class="laptop-brand">Acer</p><h2>Acer Aspire Lite, Ryzen 5, 16GB RAM, 512GB SSD</h2><p class="laptop-rating"><span>★★★★☆</span> 4.1 <small>(392)</small></p><p class="laptop-bought">250+ bought in past month</p><p class="laptop-price">₹39,990 <del>₹54,990</del> <b>27% off</b></p><p class="laptop-emi">Budget-friendly performance</p><p class="laptop-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="laptop-cart-btn" type="button"><i class="fa-solid fa-cart-plus" style="color:#000000;"></i> Add to cart</button></div>
+                    </article>
+                </div>
+<!----------------------------- leptop product 1 ------------------------------------------>
+<div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 2 ------------------------------------------>
+<div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/HP 15 Smartchoice, AMD Ryzen 3.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">HP 15 Smartchoice, AMD Ryzen 3 7320U (8GB LPDDR5, 512GB SSD) FHD, Anti-Glare, Micro-Edge, 15.6''/39.6cm, Win11, M365 Basic(1yr)* Office24, Silver, 1.59kg, fc0500AU, FHD Camera w/Privacy Shutter Laptop</h2>
+<div class="laptop-rating"><span>4.1</span><span class="laptop-stars">★★★★☆</span><span class="laptop-reviews">(149)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">1k+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">46,990</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Flat INR 500 Off on SBI BankCards</p><p class="laptop-delivery">FREE delivery <strong>Fri, 23 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 3 ------------------------------------------>
+
+<div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/81O2FaZ1L2L._AC_UY327_FMwebp_QL65_.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">HP Professional 15 (2026), Intel (i3 14th Gen) Core 3 100U - (8 GB DDR5/512 GB SSD/Intel UHD...</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">50,490</span><span class="laptop-mrp">M.R.P : ₹99,990</span><span class="laptop-discount">(50% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Up to 5% back with Amazon Pay ICICI card</p><p class="laptop-delivery">FREE delivery <strong>Mon, 26 Oct</strong></p><span style="position:relative; bottom:12px;">Or fastest delivery <strong>Wed, 21 Oct</strong></span><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 4 ------------------------------------------>
+
+<div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/HP 15, AMD Ryzen 3 7320U.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">HP 15, AMD Ryzen 3 7320U (8GB LPDDR4, 512GB SSD) FHD, Micro-Edge, 15.6"/39.6cm, Win 11, M365 Basic(1yr...</h2>
+<div class="laptop-rating"><span>4.1</span><span class="laptop-stars">★★★★☆</span><span class="laptop-reviews">(415)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">100+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">47,490</span><span class="laptop-mrp">M.R.P : ₹1,00,990</span><span class="laptop-discount">(53% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><span style="position:relative; bottom:12px;">Or fastest delivery <strong>Wed, 21 Oct</strong></span><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 5 ------------------------------------------>
+<div id="laptop-product"><div class="bestSellerBox"><p>Best seller</p><span class="slide-text">in Traditional Laptops</span></div>
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Apple2026 MacBook.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Apple 2026 MacBook Neo 13″ Laptop with A18 Pro chip: Built for AI and Apple Intelligence, Liquid Retina</h2>
+<div class="laptop-rating"><span>4.7</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(361)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">4k+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">67,990</span><span class="laptop-mrp">M.R.P : ₹79,900</span><span class="laptop-discount">(15% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Up to 5% back with Amazon Pay ICICI card</p><p class="laptop-delivery">FREE delivery <strong>18 - 27 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 6 ------------------------------------------>
+
+<div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 13th Gen Intel Core i5-13420H 15.3 inch (38.8cm) WUXGA IPS Laptop (8GB RAM/512GB...</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">100+ bought in past month</span><br>
+<div class="laptop-festival">Mega Festival Deal</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">64,990</span><span class="laptop-mrp">M.R.P : ₹1,37,690</span><span class="laptop-discount">(53% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Flat INR 3000 Off on SBI BankCards</p><p class="laptop-delivery">FREE delivery <strong>Tuu, 29 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 7 ------------------------------------------>
+
+<div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 8 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 9 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 10 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 11 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 12 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 13 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 14 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 15 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 16 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 17 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 18 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 19 ------------------------------------------>
+
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>    <div id="laptop-product">
+<div class="laptop-visual"><img class="laptop-photo" src="E-iamgeitem/All_ItemIamge/Lenovo IdeaPad Slim 3 Smartchoice 13th Gen Intel Core i7-13620H.webp" alt="Acer Aspire One Laptop"></div>
+<div class="laptop-info"><p class="sponsored">Sponsored <i class="fa-solid fa-circle-info" aria-hidden="true"></i></p><h2 class="laptop-title">Lenovo IdeaPad Slim 3 Smartchoice 13th Gen, Core i7-13620H, 16GB RAM, 512GB SSD, WUXGA IPS, 15.3 inch (38.8cm), Windows 11, Office 24, Grey, 1.6Kg, 83K1016UIN, Top Metal Cover, Backlit KB, Laptop</h2>
+<div class="laptop-rating"><span>4.2</span><span class="laptop-stars">★★★★⯪</span><span class="laptop-reviews">(23)</span></div><span style="color:rgb(211, 211, 211); position: relative; bottom:5px; font-size:14px;">300+ bought in past month</span><br>
+<div class="laptop-festival">Great Indian Festival</div><div class="laptop-price-row"><span class="laptop-currency">₹</span><span class="laptop-price">77,990</span><span class="laptop-mrp">M.R.P : ₹1,16,890</span><span class="laptop-discount">(33% off)</span></div>
+<p class="laptop-bank-offer" style="color:rgb(231, 231, 231);">Save extra with No Cost EMI</p><p class="laptop-delivery">FREE delivery <strong>Tue, 20 Oct</strong></p><button class="laptop-cart-button" type="button">Add to cart</button></div></div>
+<!----------------------------- leptop product 20 ------------------------------------------>
+ <p class="laptop-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>
+            </section>
+        </main>
+        <!-- ================= Headphone PRODUCTS ================= -->
+        <main class="product-main headphone-product-main" id="headphone-products" data-product-panel="headphone" hidden>
+            <section class="product-results" aria-labelledby="headphone-results-heading">
+                <div class="headphone-category-banner">
+                    <div>
+                        <p class="headphone-eyebrow"><i class="fa-solid fa-bolt"></i> SHOPZONE HEADPHONE STORE</p>
+                        <h1 id="headphone-results-heading">Headphones & Earphones</h1>
+                        <p>Great sound for music, calls, gaming and everyday use.</p>
+                    </div>
+                    <span class="headphone-banner-icon" aria-hidden="true"><i class="fa-solid fa-headphones"></i></span>
+                </div>
+
+                <div class="headphone-toolbar">
+                    <span class="headphone-delivery-note"><i class="fa-solid fa-truck-fast"></i> Free delivery on eligible orders</span>
+                </div>
+
+                <div class="headphone-product-grid">
+
+                    <article class="headphone-card">
+                        <div class="headphone-card-image"><span class="headphone-tag">BEST SELLER</span><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85" alt="Black wireless over-ear headphones" loading="lazy"></div>
+                        <div class="headphone-card-info"><p class="headphone-brand">boAt</p><h2>boAt Rockerz 450 Bluetooth Wireless Over-Ear Headphones, 15 Hrs Playback</h2><p class="headphone-rating"><span>★★★★☆</span> 4.1 <small>(24,512)</small></p><p class="headphone-bought">5K+ bought in past month</p><p class="headphone-price">₹1,499 <del>₹3,990</del> <b>62% off</b></p><p class="headphone-emi">No Cost EMI available</p><p class="headphone-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="headphone-cart-btn" type="button"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="headphone-card">
+                        <div class="headphone-card-image"><span class="headphone-tag headphone-tag-deal">FESTIVAL DEAL</span><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=85" alt="Premium noise cancelling headphones" loading="lazy"></div>
+                        <div class="headphone-card-info"><p class="headphone-brand">Sony</p><h2>Sony WH-CH720N Wireless Noise Cancelling Headphones, 35 Hrs Battery</h2><p class="headphone-rating"><span>★★★★★</span> 4.5 <small>(3,862)</small></p><p class="headphone-bought">1K+ bought in past month</p><p class="headphone-price">₹8,990 <del>₹14,990</del> <b>40% off</b></p><p class="headphone-emi">EMI options available</p><p class="headphone-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="headphone-cart-btn" type="button"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="headphone-card">
+                        <div class="headphone-card-image"><span class="headphone-tag">STUDENT PICK</span><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=85" alt="Headphones resting on a desk" loading="lazy"></div>
+                        <div class="headphone-card-info"><p class="headphone-brand">JBL</p><h2>JBL Tune 510BT Wireless On-Ear Headphones, Pure Bass, 40 Hrs Playback</h2><p class="headphone-rating"><span>★★★★☆</span> 4.2 <small>(9,746)</small></p><p class="headphone-bought">2K+ bought in past month</p><p class="headphone-price">₹2,999 <del>₹4,999</del> <b>40% off</b></p><p class="headphone-emi">No Cost EMI available</p><p class="headphone-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="headphone-cart-btn" type="button"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="headphone-card">
+                        <div class="headphone-card-image"><span class="headphone-tag headphone-tag-gaming">GAMING</span><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=900&q=85" alt="Gaming headset with cushioned ear cups" loading="lazy"></div>
+                        <div class="headphone-card-info"><p class="headphone-brand">Razer</p><h2>Razer Kraken Gaming Headset, 7.1 Surround Sound, Noise-Cancelling Mic</h2><p class="headphone-rating"><span>★★★★★</span> 4.4 <small>(1,519)</small></p><p class="headphone-bought">300+ bought in past month</p><p class="headphone-price">₹4,999 <del>₹7,990</del> <b>37% off</b></p><p class="headphone-emi">Gaming audio · EMI available</p><p class="headphone-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="headphone-cart-btn" type="button"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="headphone-card">
+                        <div class="headphone-card-image"><img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=900&q=85" alt="Stylish wireless headphones in studio light" loading="lazy"></div>
+                        <div class="headphone-card-info"><p class="headphone-brand">Sennheiser</p><h2>Sennheiser HD 450BT Wireless Headphones, Active Noise Cancellation</h2><p class="headphone-rating"><span>★★★★☆</span> 4.3 <small>(634)</small></p><p class="headphone-bought">400+ bought in past month</p><p class="headphone-price">₹9,490 <del>₹14,990</del> <b>37% off</b></p><p class="headphone-emi">No Cost EMI available</p><p class="headphone-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="headphone-cart-btn" type="button"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+                    </article>
+
+                    <article class="headphone-card">
+                        <div class="headphone-card-image"><span class="headphone-tag">VALUE PICK</span><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85" alt="Everyday wireless headphones for music and calls" loading="lazy"></div>
+                        <div class="headphone-card-info"><p class="headphone-brand">realme</p><h2>realme Buds Wireless 3 Neckband, 40 Hrs Playback, Fast Charging</h2><p class="headphone-rating"><span>★★★★☆</span> 4.1 <small>(12,392)</small></p><p class="headphone-bought">3K+ bought in past month</p><p class="headphone-price">₹1,799 <del>₹2,999</del> <b>40% off</b></p><p class="headphone-emi">Budget-friendly sound</p><p class="headphone-delivery">FREE delivery <strong>in 2–4 days</strong></p><button class="headphone-cart-btn" type="button"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+                    </article>
+
+                </div>
+                <p class="headphone-disclaimer">Product names, ratings, prices and offers above are sample display content. Replace them with your verified product details.</p>
+            </section>
+        </main>
+    </div>
+    <script src="productItem.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+</body>
+</html>

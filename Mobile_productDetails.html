@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Mobile_productDetails.css">
+</head>
+<body>
+    <!-- =========================
+     NAVBAR
+========================= -->
+
+    <!-- PRODUCT MAIN -->
+
+    <section class="product-main">
+        <!-- =====================
+             IMAGE GALLERY
+        ====================== -->
+
+        <div class="gallery">
+            <div class="thumbnails">
+                <div class="thumbnail active"
+                     onclick="changeImage(0)">
+
+                    <img
+                    src="E-iamgeitem/All_ItemIamge/Iphone18_ProMax_WhiteColor.png">
+
+                </div>
+
+
+                <div class="thumbnail"
+                     onclick="changeImage(1)">
+
+                    <img
+                    src="E-iamgeitem/All_ItemIamge/Iphone18ProMax_brownColor.png">
+
+                </div>
+
+
+                <div class="thumbnail"
+                     onclick="changeImage(2)">
+
+                    <img
+                    src="E-iamgeitem/Mobiles/iphone18-side.png">
+
+                </div>
+
+
+                <div class="thumbnail"
+                     onclick="changeImage(3)">
+
+                    <img
+                    src="E-iamgeitem/Mobiles/iphone18-camera.png">
+
+                </div>
+
+
+                <div class="thumbnail"
+                     onclick="changeImage(4)">
+
+                    <img
+                    src="E-iamgeitem/Mobiles/iphone18-display.png">
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MAIN IMAGE -->
+
+            <div class="main-image">
+
+
+                <span class="new-badge">
+                    New
+                </span>
+
+
+                <img
+                id="mainProductImage"
+                src="E-iamgeitem/Mobiles/iphone18-front.png"
+                alt="iPhone 18 Pro Max">
+
+
+                <span class="image-counter">
+                    <span id="imageNumber">1</span> / 5
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             PRODUCT DETAILS
+        ====================== -->
+
+        <div class="product-details">
+
+
+            <h1 class="product-title">
+                iPhone 18 Pro Max
+            </h1>
+
+
+            <p class="subtitle">
+                Bigger Ideas. More Powerful.
+            </p>
+
+
+
+            <!-- RATING -->
+
+            <div class="rating-row">
+
+                <span class="stars">
+                    ★★★★★
+                </span>
+
+                <strong>
+                    4.8
+                </strong>
+
+                <span>
+                    (12,542 Reviews)
+                </span>
+
+                <span class="review-link">
+                    Write a Review
+                </span>
+
+            </div>
+
+
+
+            <!-- BADGES -->
+
+            <div class="badges">
+
+                <span class="badge">
+                    <i class="fa-solid fa-shield-check"></i>
+                    Brand New
+                </span>
+
+                <span class="badge">
+                    <i class="fa-solid fa-check"></i>
+                    In Stock
+                </span>
+
+                <span class="badge delivery">
+                    <i class="fa-solid fa-truck"></i>
+                    Free Delivery
+                </span>
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div class="price-row">
+
+                <span class="price">
+                    ₹1,59,900
+                </span>
+
+                <span class="old-price">
+                    ₹1,79,900
+                </span>
+
+                <span class="discount">
+                    11% OFF
+                </span>
+
+                <span class="tax">
+                    Inclusive of all taxes
+                </span>
+
+            </div>
+
+
+
+            <!-- COLOR -->
+
+            <div class="option-section">
+
+                <div class="option-title">
+                    Choose Color
+                </div>
+
+
+                <div class="colors">
+
+
+                    <div class="color-option selected"
+                         onclick="selectColor(this)">
+
+                        <span class="color-circle purple"></span>
+
+                        Deep Purple
+
+                    </div>
+
+
+                    <div class="color-option"
+                         onclick="selectColor(this)">
+
+                        <span class="color-circle silver"></span>
+
+                        Silver
+
+                    </div>
+
+
+                    <div class="color-option"
+                         onclick="selectColor(this)">
+
+                        <span class="color-circle black"></span>
+
+                        Space Black
+
+                    </div>
+
+
+                    <div class="color-option"
+                         onclick="selectColor(this)">
+
+                        <span class="color-circle gold"></span>
+
+                        Gold
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STORAGE -->
+
+            <div class="option-section">
+
+                <div class="option-title">
+                    Select Storage
+                </div>
+
+
+                <div class="storage-options">
+
+
+                    <button
+                    class="storage selected"
+                    onclick="selectStorage(this)">
+
+                        256GB
+
+                    </button>
+
+
+                    <button
+                    class="storage"
+                    onclick="selectStorage(this)">
+
+                        512GB
+
+                    </button>
+
+
+                    <button
+                    class="storage"
+                    onclick="selectStorage(this)">
+
+                        1TB
+
+                    </button>
+
+
+                    <button
+                    class="storage"
+                    onclick="selectStorage(this)">
+
+                        2TB
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DELIVERY + QUANTITY -->
+
+            <div class="delivery-quantity">
+
+
+                <div class="delivery-info">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <div>
+
+                        <strong>
+                            Delivery by 3–5 Days
+                        </strong>
+
+                        <br>
+
+                        <small>
+                            Free Delivery
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="quantity">
+
+                    <button onclick="decreaseQty()">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button onclick="increaseQty()">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="action-buttons">
+
+
+                <button
+                class="cart-btn"
+                onclick="addToCart()">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+
+                <button
+                class="buy-btn"
+                onclick="buyNow()">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    Buy Now
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- GUARANTEE -->
+
+            <div class="guarantee">
+
+
+                <div class="guarantee-item">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    100% Original
+                    Products
+
+                </div>
+
+
+                <div class="guarantee-item">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    1 Year
+                    Warranty
+
+                </div>
+
+
+                <div class="guarantee-item">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    7 Days
+                    Easy Returns
+
+                </div>
+
+
+                <div class="guarantee-item">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Secure
+                    Payments
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PRODUCT INFORMATION
+    ========================== -->
+
+    <section class="product-tabs">
+
+
+        <div class="tabs">
+
+
+            <div
+            class="tab active"
+            onclick="openTab(this,'overview')">
+
+                Overview
+
+            </div>
+
+
+            <div
+            class="tab"
+            onclick="openTab(this,'specification')">
+
+                Specifications
+
+            </div>
+
+
+            <div
+            class="tab"
+            onclick="openTab(this,'box')">
+
+                In The Box
+
+            </div>
+
+
+            <div
+            class="tab"
+            onclick="openTab(this,'warranty')">
+
+                Warranty
+
+            </div>
+
+
+            <div
+            class="tab"
+            onclick="openTab(this,'reviews')">
+
+                Reviews
+
+            </div>
+        </div>
+        <!-- OVERVIEW -->
+        <div class="tab-content" id="overview">
+            <h2>About This Product </h2>
+            <p> The iPhone 18 Pro Max is designed for users who want premium performance, an advanced camera system, a stunning display and powerful battery life. Its premium design delivers a smooth experience for gaming, photography, entertainment and everyday tasks.
+            </p>
+            <div class="features">
+                <div class="feature"> <i class="fa-solid fa-microchip"></i>  A20 Pro Chip with 6-core CPU
+                </div>
+                <div class="feature"> <i class="fa-solid fa-camera"></i> 200MP Pro Camera System </div>
+                <div class="feature"><i class="fa-solid fa-mobile-screen"></i> 6.9" Super Retina XDR Display </div>
+                <div class="feature"> <i class="fa-solid fa-battery-full"></i> Long-lasting Battery </div>
+                <div class="feature"><i class="fa-solid fa-mobile"></i> Premium Titanium Frame </div>
+                <div class="feature"><i class="fa-brands fa-apple"></i> Latest iOS </div>
+            </div>
+        </div>
+        <!-- SPECIFICATION -->
+        <div class="tab-content" id="specification" style="display:none;">
+            <h2> Specifications</h2>
+            <div class="features">
+                <div class="feature"> <strong>Display:</strong> 6.9-inch Super Retina XDR </div>
+                <div class="feature"> <strong>Processor:</strong> A20 Pro </div>
+                <div class="feature"> <strong>Camera:</strong> 200MP Pro Camera </div>
+                <div class="feature"> <strong>Storage:</strong> 256GB / 512GB / 1TB / 2TB </div>
+                <div class="feature"> <strong>Frame:</strong> Titanium </div>
+                <div class="feature">
+                    <strong>Operating System:</strong> iOS
+                </div>
+            </div>
+        </div>
+        <!-- BOX -->
+        <div class="tab-content" id="box" style="display:none;">
+            <h2> In The Box </h2>
+            <div class="features">
+                <div class="feature"> <i class="fa-solid fa-mobile-screen"></i> iPhone 18 Pro Max </div>
+                <div class="feature"> <i class="fa-solid fa-plug"></i> USB-C Cable </div>
+                <div class="feature"> <i class="fa-solid fa-book"></i> Documentation </div>
+                <div class="feature"> <i class="fa-solid fa-box"></i> Original Packaging </div>
+            </div>
+        </div>
+        <!-- WARRANTY -->
+        <div class="tab-content" id="warranty" style="display:none;">
+            <h2>Warranty </h2>
+            <p> This product includes a 1-year limited warranty. Warranty coverage depends on the manufacturer's terms and conditions. </p>
+        </div>
+        <!-- REVIEWS -->
+        <div class="tab-content" id="reviews" style="display:none;">
+            <h2> Customer Reviews </h2>
+            <p> ★★★★★ 4.8 / 5 <br><br> Based on 12,542 customer reviews. </p>
+        </div>
+    </section>
+</main>
+
+<!-- =========================
+     TOAST
+========================= -->
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText"> Added to Cart </span>
+</div>
+<script src="Mobile_productDetails.js"></script>
+</body>
+</html>

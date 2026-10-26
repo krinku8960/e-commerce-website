@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080b18;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= TOP NAVBAR ================= */
+
+        .top-navbar {
+            width: 100%;
+            height: 75px;
+
+            padding: 0 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #0b1020;
+
+            border-bottom: 1px solid #1b2a43;
+
+            box-shadow: 0 5px 25px rgba(0, 255, 255, 0.08);
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+        }
+
+        /* LOGO */
+
+        .shop-logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .shop-logo h2 {
+            color: #00ffff;
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+
+        .shop-logo span {
+            color: #aaa;
+            font-size: 11px;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* TOP MENU */
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #ddd;
+
+            padding: 11px 17px;
+
+            border-radius: 10px;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #00ffff;
+            background: rgba(0, 255, 255, 0.08);
+        }
+
+        .nav-menu a.active {
+            color: #00ffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        /* LOGIN */
+
+        .login-btn {
+            color: #001010 !important;
+
+            background: linear-gradient(
+                135deg,
+                #00ffff,
+                #00eaff
+            );
+
+            padding: 11px 22px !important;
+
+            border-radius: 25px !important;
+
+            font-weight: bold;
+
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+        }
+
+
+        /* ================= LEFT SIDEBAR ================= */
+
+        .left-sidebar {
+            position: fixed;
+
+            top: 75px;
+            left: 0;
+
+            width: 235px;
+            height: calc(100vh - 75px);
+
+            padding: 25px 15px;
+
+            background: #0b1020;
+
+            border-right: 1px solid #1b2a43;
+
+            overflow-y: auto;
+
+            z-index: 900;
+        }
+
+
+        /* SIDEBAR TITLE */
+
+        .sidebar-title {
+            font-size: 20px;
+
+            color: #00ffff;
+
+            margin-bottom: 18px;
+
+            padding-left: 10px;
+        }
+
+
+        /* CATEGORY ITEM */
+
+        .category-item {
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 12px 13px;
+
+            margin-bottom: 6px;
+
+            color: #ddd;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        /* CATEGORY ICON */
+
+        .category-item img {
+            width: 28px;
+            height: 28px;
+
+            object-fit: contain;
+
+            filter: invert(1);
+
+            transition: 0.3s;
+        }
+
+
+        /* HOVER */
+
+        .category-item:hover {
+            color: #00ffff;
+
+            background: rgba(0, 255, 255, 0.08);
+
+            transform: translateX(4px);
+        }
+
+        .category-item:hover img {
+            filter:
+                invert(79%)
+                sepia(99%)
+                saturate(1000%)
+                hue-rotate(130deg);
+
+            transform: scale(1.1);
+        }
+
+
+        /* ACTIVE CATEGORY */
+
+        .category-item.active {
+            color: #00ffff;
+
+            background: rgba(0, 255, 255, 0.1);
+
+            border-left: 3px solid #00ffff;
+        }
+
+
+        /* ================= MAIN CONTENT ================= */
+
+        .main-content {
+            margin-left: 235px;
+
+            padding: 110px 40px 40px;
+        }
+
+        .main-content h1 {
+            font-size: 40px;
+
+            color: white;
+        }
+
+        .main-content p {
+            color: #aaa;
+
+            margin-top: 10px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .top-navbar {
+                padding: 0 20px;
+            }
+
+            .nav-menu {
+                gap: 2px;
+            }
+
+            .nav-menu a {
+                padding: 9px 10px;
+                font-size: 13px;
+            }
+
+            .left-sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 200px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .top-navbar {
+                height: auto;
+
+                padding: 15px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .left-sidebar {
+                top: 125px;
+
+                height: calc(100vh - 125px);
+
+                width: 190px;
+            }
+
+            .main-content {
+                margin-left: 190px;
+
+                padding-top: 160px;
+
+                padding-left: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= TOP NAVBAR ================= -->
+
+    <nav class="top-navbar">
+
+        <!-- LOGO -->
+
+        <div class="shop-logo">
+
+            <h2>ShopZone</h2>
+
+            <span>Better product</span>
+
+        </div>
+
+
+        <!-- TOP MENU -->
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="#" class="active">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#" class="login-btn" onclick="loginFromPageOpen()">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+
+    <aside class="left-sidebar">
+
+        <h2 class="sidebar-title">
+            Categories
+        </h2>
+
+
+        <!-- Mobiles -->
+
+        <a href="#" class="category-item active">
+
+            <img
+                src="https://img.icons8.com/ios-filled/50/smartphone.png"
+                alt="Mobiles"
+            >
+
+            <span>Mobiles</span>
+
+        </a>
+
+
+        <!-- Laptops -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-filled/50/laptop.png"
+                alt="Laptops"
+            >
+
+            <span>Laptops</span>
+
+        </a>
+
+
+        <!-- Headphones -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/fluency-systems-regular/48/headphones.png"
+                alt="Headphones"
+            >
+
+            <span>Headphones</span>
+
+        </a>
+
+
+        <!-- Smart Watches -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/pastel-glyph/64/apple-watch-apps.png"
+                alt="Smart Watches"
+            >
+
+            <span>Smart Watches</span>
+
+        </a>
+
+
+        <!-- Fashion -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-glyphs/60/t-shirt-on-hanger.png"
+                alt="Fashion"
+            >
+
+            <span>Fashion</span>
+
+        </a>
+
+
+        <!-- Footwear -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-glyphs/60/mens-shoe.png"
+                alt="Footwear"
+            >
+
+            <span>Footwear</span>
+
+        </a>
+
+
+        <!-- Home & Living -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-glyphs/60/home-page--v1.png"
+                alt="Home & Living"
+            >
+
+            <span>Home & Living</span>
+
+        </a>
+
+
+        <!-- Beauty -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-glyphs/60/shaving-cream.png"
+                alt="Beauty"
+            >
+
+            <span>Beauty</span>
+
+        </a>
+
+
+        <!-- Sport -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-glyphs/60/dumbbell.png"
+                alt="Sport"
+            >
+
+            <span>Sport</span>
+
+        </a>
+
+
+        <!-- Game -->
+
+        <a href="#" class="category-item">
+
+            <img
+                src="https://img.icons8.com/ios-glyphs/60/xbox-controller.png"
+                alt="Game"
+            >
+
+            <span>Game</span>
+
+        </a>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <h1>Better Life</h1>
+
+        <p>
+            Discover better products at ShopZone.
+        </p>
+
+    </main>
+    <script>
+     function loginFromPageOpen() {
+    document.getElementById("loginPopup").style.display = "flex";
+}
+
+function closeLoginPopup() {
+    document.getElementById("loginPopup").style.display = "none";
+}
+
+    </script>
+</body>
+</html>
