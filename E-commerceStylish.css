@@ -5,21 +5,26 @@
   box-sizing: border-box;
   /*--------------------------------------------- body styling ------------------------------------------- */
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #030712;
   color: #ffffff;
-  font-family: "Poppins", sans-serif; /* overflow:hidden; */
+  font-family: "Poppins", sans-serif;
+  /* overflow:hidden; */
 }
+
 /*--------------------------------------------- body styling end------------------------------------------- */
 /*------------------------------------ header class Styling ----------------------------------------------- */
 .header {
   display: flex;
   justify-content: space-between;
   border: 1px solid #0b1329;
-  background-color: #0b1329; /* Card background */
+  background-color: #0b1329;
+  /* Card background */
   align-items: center;
   padding: 5px 20px 5px 20px;
 }
@@ -481,14 +486,12 @@ i {
 
   border-radius: inherit;
 
-  background: linear-gradient(
-    135deg,
-    deeppink,
-    #ff00ff,
-    #8a2be2,
-    #0066ff,
-    blue
-  );
+  background: linear-gradient(135deg,
+      deeppink,
+      #ff00ff,
+      #8a2be2,
+      #0066ff,
+      blue);
 
   z-index: -1;
 }
@@ -590,15 +593,13 @@ i {
   font-weight: 900;
   /* line-height: 1.4; */
   /* letter-spacing:5; */
-  background: linear-gradient(
-    90deg,
-    #00eaff 0%,
-    #d400ff 20%,
-    #6b35ff 45%,
-    #dd00ff 65%,
-    #d400ff 82%,
-    #ff00d9 100%
-  );
+  background: linear-gradient(90deg,
+      #00eaff 0%,
+      #d400ff 20%,
+      #6b35ff 45%,
+      #dd00ff 65%,
+      #d400ff 82%,
+      #ff00d9 100%);
 
   /* Gradient ko text ke andar show karega */
   -webkit-background-clip: text;
@@ -608,9 +609,7 @@ i {
   -webkit-text-fill-color: transparent;
   color: transparent;
 
-  filter: drop-shadow(0 0 5px rgba(0, 234, 255, 0.35))
-    drop-shadow(0 0 15px rgba(75, 80, 255, 0.25))
-    drop-shadow(0 0 25px rgba(180, 0, 255, 0.2));
+  filter: drop-shadow(0 0 5px rgba(0, 234, 255, 0.35)) drop-shadow(0 0 15px rgba(75, 80, 255, 0.25)) drop-shadow(0 0 25px rgba(180, 0, 255, 0.2));
 }
 
 /* ============================| | | | | | | | | | | | | | | | | | |===================================== */
@@ -809,8 +808,7 @@ i {
   border-radius: 20px;
   height: 80px;
   background:
-    linear-gradient(135deg, #00041aec, #00041aec, #00041aec, #00041aec)
-      padding-box,
+    linear-gradient(135deg, #00041aec, #00041aec, #00041aec, #00041aec) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
 
   box-shadow:
@@ -830,8 +828,7 @@ i {
   border-radius: 18px;
   padding: 0.5px;
 
-  background: linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9, #00eaff)
-    border-box;
+  background: linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9, #00eaff) border-box;
 
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -867,7 +864,7 @@ i {
   border-right: none;
 }
 
-.helpCenterItemBox_content > i {
+.helpCenterItemBox_content>i {
   color: #00eaff;
   font-size: 28px;
   filter: drop-shadow(0 0 6px #00eaff80);
@@ -1366,9 +1363,8 @@ i {
   font-size: 10px;
 }
 
-.shopCaintainerItem-Group div > img {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(90%) saturate(1800%)
-    hue-rotate(145deg) brightness(110%);
+.shopCaintainerItem-Group div>img {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(90%) saturate(1800%) hue-rotate(145deg) brightness(110%);
   width: 30px;
   height: 30px;
   display: flex;
@@ -1390,19 +1386,18 @@ i {
   justify-items: center;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+
   &:hover {
     img {
-      filter: brightness(0) saturate(100%) invert(72%) sepia(90%)
-        saturate(1500%) hue-rotate(130deg) brightness(110%)
-        drop-shadow(0 0 8px #00fffb) drop-shadow(0 0 20px #001d23);
+      filter: brightness(0) saturate(100%) invert(72%) sepia(90%) saturate(1500%) hue-rotate(130deg) brightness(110%) drop-shadow(0 0 8px #00fffb) drop-shadow(0 0 20px #001d23);
     }
+
     transform: translateY(-4px);
   }
 }
 
 #Grid_View_more img {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(90%) saturate(1800%)
-    hue-rotate(145deg) brightness(1000%);
+  filter: brightness(0) saturate(100%) invert(80%) sepia(90%) saturate(1800%) hue-rotate(145deg) brightness(1000%);
 }
 
 #Grid_View_more:hover {
@@ -1476,11 +1471,9 @@ i {
   height: 118px;
   padding: 18px 16px 18px 18px;
   border-radius: 18px;
-  background: linear-gradient(
-    180deg,
-    rgba(16, 56, 82, 0.9),
-    rgba(14, 46, 69, 1)
-  );
+  background: linear-gradient(180deg,
+      rgba(16, 56, 82, 0.9),
+      rgba(14, 46, 69, 1));
   border: 1px solid transparent;
   border-radius: 10px;
   background:
@@ -1496,11 +1489,9 @@ i {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(75, 204, 255, 0.08),
-    transparent 50%
-  );
+  background: linear-gradient(135deg,
+      rgba(75, 204, 255, 0.08),
+      transparent 50%);
   pointer-events: none;
 }
 
@@ -2049,7 +2040,7 @@ i {
   gap: 10px;
 }
 
-#footer .footer-brand > i {
+#footer .footer-brand>i {
   font-size: 30px;
   color: #00eaff;
 
@@ -2288,9 +2279,9 @@ a {
 
   padding: 0 45px;
 
-  background:linear-gradient(#080b18, #080b18) padding-box,
+  background: linear-gradient(#080b18, #080b18) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
-    border-bottom:1px solid transparent;
+  border-bottom: 1px solid transparent;
 
   position: sticky;
   top: 0;
@@ -2372,7 +2363,7 @@ a {
   box-shadow: 0 0 15px rgba(0, 234, 255, 0.15);
 }
 
-.search-box > i {
+.search-box>i {
   margin-left: 20px;
 
   font-size: 17px;
@@ -2440,6 +2431,7 @@ a {
 
   gap: 28px;
 }
+
 /* -----------------------------------Home Btn Start stylish ----------------------------------- */
 
 .home-btn {
@@ -2448,9 +2440,9 @@ a {
   height: 40px;
   align-items: center;
   justify-content: center;
- background:linear-gradient(#080b18, #080b18) padding-box,
+  background: linear-gradient(#080b18, #080b18) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
-    border:1px solid transparent;
+  border: 1px solid transparent;
   border-radius: 50%;
   color: var(--cyan);
   text-decoration: none;
@@ -2500,10 +2492,10 @@ a {
 .login-btn {
   height: 40px;
   padding: 0 20px;
- 
- background:linear-gradient(#080b18, #080b18) padding-box,
+
+  background: linear-gradient(#080b18, #080b18) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
-    border:1px solid transparent;
+  border: 1px solid transparent;
   border-radius: 30px;
   /* background: transparent; */
   color: white;
@@ -2511,6 +2503,7 @@ a {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .login-btn i {
   margin-right: 8px;
 }
@@ -2567,17 +2560,21 @@ a {
   scrollbar-width: thin;
   scrollbar-color: var(--cyan) transparent;
 }
+
 /* Chrome scrollbar */
 .category-sidebar::-webkit-scrollbar {
   width: 7px;
 }
+
 .category-sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .category-sidebar::-webkit-scrollbar-thumb {
   background: var(--cyan);
   border-radius: 20px;
 }
+
 /* ================= CATEGORY TITLE ================= */
 .category-title {
   display: flex;
@@ -2585,6 +2582,7 @@ a {
   gap: 13px;
   padding: 0 10px 15px;
 }
+
 .category-title i {
   color: var(--cyan);
   font-size: 23px;
@@ -2605,9 +2603,9 @@ a {
   gap: 20px;
   padding: 0 18px;
   margin: 7px 0;
-  background:linear-gradient(#080b18, #080b18) padding-box,
+  background: linear-gradient(#080b18, #080b18) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
-    border:1px solid transparent;
+  border: 1px solid transparent;
   border-radius: 13px;
   color: var(--text-light);
   font-size: 17px;
@@ -2618,7 +2616,7 @@ a {
     color 0.3s;
 }
 
-.category-item > i:first-child {
+.category-item>i:first-child {
   width: 27px;
 
   text-align: center;
@@ -2661,11 +2659,9 @@ a {
 .category-item.active {
   color: var(--cyan);
 
-  background: linear-gradient(
-    90deg,
-    rgba(0, 234, 255, 0.22),
-    rgba(0, 234, 255, 0.04)
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 234, 255, 0.22),
+      rgba(0, 234, 255, 0.04));
 
   border-color: var(--cyan);
 
@@ -2686,11 +2682,9 @@ a {
   min-height: calc(100vh - 100px);
   padding: 28px;
 
-  background: radial-gradient(
-    circle at 70% 20%,
-    rgba(0, 234, 255, 0.035),
-    transparent 40%
-  );
+  background: radial-gradient(circle at 70% 20%,
+      rgba(0, 234, 255, 0.035),
+      transparent 40%);
 
   /*
         Keep this section empty.
@@ -2799,7 +2793,7 @@ a {
     gap: 0;
   }
 
-  .category-item > i:first-child {
+  .category-item>i:first-child {
     font-size: 20px;
   }
 
@@ -2816,6 +2810,7 @@ a {
     font-size: 18px;
   }
 }
+
 /* ===========================================================================================================================
 =========================================================================================================================== */
 
@@ -2872,7 +2867,7 @@ a {
   min-height: 190px;
   display: flex;
   overflow: hidden;
-    background:
+  background:
     linear-gradient(#080b18, #080b18) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
   border: 1px solid transparent;
@@ -2884,7 +2879,7 @@ a {
 
 .quick-product:hover,
 .featured-product:hover {
-    background:
+  background:
     linear-gradient(#080b18, #080b18) padding-box,
     linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
   border: 1px solid transparent;
@@ -2938,7 +2933,7 @@ a {
   font-size: 11px;
 }
 
-.rating > span {
+.rating>span {
   color: #ffad45;
   letter-spacing: -1px;
 }
@@ -2969,7 +2964,7 @@ a {
   white-space: nowrap;
 }
 
-.quick-price > span {
+.quick-price>span {
   color: #ff5871;
   font-size: 14px;
 }
@@ -3000,6 +2995,7 @@ a {
   color: #aeb9c9;
   font-size: 12px;
 }
+
 .featured-product {
   min-height: 225px;
   display: flex;
@@ -3215,6 +3211,7 @@ a {
   position: relative;
   bottom: 2px;
 }
+
 .product-colors {
   display: flex;
   gap: 7px;
@@ -3230,439 +3227,1172 @@ a {
   outline-offset: 2px;
   cursor: pointer;
 }
+
 /* Galaxy A56 - 50MP Triple CameraGalaxy A56 - 50MP Triple Camera */
 
 /* Main Samsung Section */
 #samsungBrandSection_01 {
-    margin: 10px;
+  margin: 10px;
 }
+
 /* Logo + Content Layout */
 .samsungBrandLayout_01 {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 /* Samsung Logo */
 .samsungBrandLogoBox_01 {
-    flex-shrink: 0;
-    border-right:1px solid darkblue;
+  flex-shrink: 0;
+  border-right: 1px solid darkblue;
 
 }
 
 .samsungBrandLogoImage_01 {
-    /* display: block; */
-    width: 160px;
-    height: 60px;
-    display:flex; align-items:center;
+  /* display: block; */
+  width: 160px;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 /* Product Information */
 .samsungBrandContent_01 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
 }
 
 /* Product Heading */
 .samsungBrandHeading_01 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-    color: #ffffff;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 /* Sponsored Information Row */
 .samsungBrandMetaRow_01 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 /* Sponsored Label */
 .samsungBrandSponsored_01 {
-    font-size: 12px;
-    color: #a0a0a0;
-    flex-shrink: 0;
+  font-size: 12px;
+  color: #a0a0a0;
+  flex-shrink: 0;
 }
 
 .samsungBrandSponsored_01 i {
-    font-size: 11px;
-    margin-left: 2px;
-    color:rgb(128, 128, 128);
+  font-size: 11px;
+  margin-left: 2px;
+  color: rgb(128, 128, 128);
 }
 
 /* Category Details */
 .samsungBrandDetails_01 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #a0a0a0;
 }
 
 .samsungBrandSeparator_01 {
-    color: #a0a0a0;
+  color: #a0a0a0;
 }
 
 /* Shop Samsung Link */
 .samsungBrandShopLink_01 {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    color: rgb(0, 157, 255);
-    font-size: 14px;
-    text-decoration: none;
-    transition: color 0.5s ease;
-            &:hover{
-          color:rgb(239, 0, 0);
-          i{
-            color:rgb(239, 0, 0);
-          }
-        }
-    i{
-        color: rgb(0, 157, 255);
-        &:hover{
-            color:rgb(239, 0, 0);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: rgb(0, 157, 255);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.5s ease;
 
-        }
+  &:hover {
+    color: rgb(239, 0, 0);
+
+    i {
+      color: rgb(239, 0, 0);
     }
+  }
+
+  i {
+    color: rgb(0, 157, 255);
+
+    &:hover {
+      color: rgb(239, 0, 0);
+
+    }
+  }
 }
 
 
 /*----------------------------- samsung product mobile ------------------- */
-.grid-samsungMobile-tamplate { display:flex;} .grid-samsungMobile-tamplate .card { border:1px solid cyan; width:230px; margin:5px; border-radius:5px; overflow:hidden;} .grid-samsungMobile-tamplate .card img { width:207px; height:200px;overflow:hidden; border-top-left-radius:5px; border-top-right-radius:5px;}
-.info {padding:10px;} .card .festival {border:1px solid rgb(15, 0, 0); border-radius:3px; padding:5px; display:inline-block; font-size:13px; background-color:rgb(172, 0, 0);} .card .count {color:#d7d7d7; font-size:12px;} .card .rating {color:#d7d7d7; font-size:12px;}
-.samsun_ProductMobileBrad_highPrice {} .samsun_ProductMobileBrad_highPrice h2{margin:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;} .festival-label{border:1px solid rgb(15, 0, 0); border-radius:3px; padding:5px; display:inline-block; font-size:13px; background-color:rgb(172, 0, 0);} .featured-product-info #brandColor_name{color: orangered; font-size:20px;}
+.grid-samsungMobile-tamplate {
+  display: flex;
+}
+
+.grid-samsungMobile-tamplate .card {
+  border: 1px solid cyan;
+  width: 230px;
+  margin: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.grid-samsungMobile-tamplate .card img {
+  width: 207px;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.info {
+  padding: 10px;
+}
+
+.card .festival {
+  border: 1px solid rgb(15, 0, 0);
+  border-radius: 3px;
+  padding: 5px;
+  display: inline-block;
+  font-size: 13px;
+  background-color: rgb(172, 0, 0);
+}
+
+.card .count {
+  color: #d7d7d7;
+  font-size: 12px;
+}
+
+.card .rating {
+  color: #d7d7d7;
+  font-size: 12px;
+}
+
+.samsun_ProductMobileBrad_highPrice h2 {
+  margin: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.festival-label {
+  border: 1px solid rgb(15, 0, 0);
+  border-radius: 3px;
+  padding: 5px;
+  display: inline-block;
+  font-size: 13px;
+  background-color: rgb(172, 0, 0);
+}
+
+.featured-product-info #brandColor_name {
+  color: orangered;
+  font-size: 20px;
+}
 
 
 /* ----------------------------------------- */
 /* ===== DARK THEME - PRODUCT BADGES ===== */
 
 .grid-samsungMobile-tamplate .badge {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    z-index: 5;
-    background: #ff6b35;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 5px 8px;
-    border-radius: 4px;
-    line-height: 1.3;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 5;
+  background: #ff6b35;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 8px;
+  border-radius: 4px;
+  line-height: 1.3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== SPONSORED ===== */
 
 .grid-samsungMobile-tamplate .sponsored {
-    display: block;
-    color: #a1a1aa;
-    font-size: 11px;
-    margin: 8px 0 5px;
+  display: block;
+  color: #a1a1aa;
+  font-size: 11px;
+  margin: 8px 0 5px;
 }
 
 /* ===== OTHER COLORS LINK ===== */
 
 .grid-samsungMobile-tamplate .colors-link {
-    display: inline-block;
-    color: #60a5fa;
-    font-size: 12px;
-    text-decoration: none;
-    margin: 10px 0 5px;
-    transition: color 0.2s ease;
+  display: inline-block;
+  color: #60a5fa;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 10px 0 5px;
+  transition: color 0.2s ease;
 }
 
 .grid-samsungMobile-tamplate .colors-link:hover {
-    color: #93c5fd;
-    text-decoration: underline;
+  color: #93c5fd;
+  text-decoration: underline;
 }
 
 /* ===== PRODUCT COLOR OPTIONS ===== */
 
 .grid-samsungMobile-tamplate .color-dots {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 12px 0;
-    padding: 3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 3px;
 }
 
 .grid-samsungMobile-tamplate .color-dots i {
-    display: block;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    border: 1px solid #71717a;
-    background: #a1a1aa;
-    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.12);
-    cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #71717a;
+  background: #a1a1aa;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .grid-samsungMobile-tamplate .color-dots i:nth-child(2) {
-    background: #27272a;
+  background: #27272a;
 }
 
 .grid-samsungMobile-tamplate .color-dots i:nth-child(3) {
-    background: #a1a1aa;
+  background: #a1a1aa;
 }
 
 .grid-samsungMobile-tamplate .color-dots i:nth-child(4) {
-    background: #d4d4d8;
+  background: #d4d4d8;
 }
 
 .grid-samsungMobile-tamplate .color-dots i.active {
-    outline: 2px solid #e4e4e7;
-    outline-offset: 2px;
+  outline: 2px solid #e4e4e7;
+  outline-offset: 2px;
 }
 
 .grid-samsungMobile-tamplate .color-dots i:hover {
-    transform: scale(1.12);
-    border-color: #ffffff;
+  transform: scale(1.12);
+  border-color: #ffffff;
 }
 
 /* ===== BOUGHT RECENTLY ===== */
 
 .grid-samsungMobile-tamplate .bought {
-    color: #a1a1aa;
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 6px 0 10px;
+  color: #a1a1aa;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 6px 0 10px;
 }
 
 /* ===== FESTIVAL DEAL ===== */
 
 .grid-samsungMobile-tamplate .festival {
-    display: table;
-    background: #be123c;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 6px 9px;
-    border-radius: 4px;
-    margin: 8px 0;
-    line-height: 1.4;
-    box-shadow: 0 2px 8px rgba(190, 18, 60, 0.15);
+  display: table;
+  background: #be123c;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 9px;
+  border-radius: 4px;
+  margin: 8px 0;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(190, 18, 60, 0.15);
 }
 
 /* ===== COUPON OFFER ===== */
 
 .grid-samsungMobile-tamplate .coupon {
-    display: inline-block;
-    background:rgb(0, 225, 0);
-    color: #000301;
-    font-size: 12px;
-    padding: 5px 7px;
-    margin: 5px 0;
-    border: 1px solid #166534;
-    border-radius: 4px;
-    line-height: 1.5;
-    display:inline-block;
+  display: inline-block;
+  background: rgb(0, 225, 0);
+  color: #000301;
+  font-size: 12px;
+  padding: 5px 7px;
+  margin: 5px 0;
+  border: 1px solid #166534;
+  border-radius: 4px;
+  line-height: 1.5;
+  display: inline-block;
 }
 
 .grid-samsungMobile-tamplate .coupon span {
-    background: #1f2937;
-    color: #d1d5db;
-    margin-left: 3px;
-    padding: 2px 4px;
-    border-radius: 2px;
+  background: #1f2937;
+  color: #d1d5db;
+  margin-left: 3px;
+  padding: 2px 4px;
+  border-radius: 2px;
 }
 
 /* ===== NO COST EMI ===== */
 
 .grid-samsungMobile-tamplate .emi {
-    color: #d4d4d8;
-    font-size: 13px;
-    margin: 6px 0 12px;
-    line-height: 1.6;
+  color: #d4d4d8;
+  font-size: 13px;
+  margin: 6px 0 12px;
+  line-height: 1.6;
 }
 
 /* ===== DELIVERY DETAILS ===== */
 
 .grid-samsungMobile-tamplate .delivery {
-    color: #d4d4d8;
-    font-size: 12px;
-    line-height: 1.7;
-    margin: 8px 0;
+  color: #d4d4d8;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 8px 0;
 }
 
 .grid-samsungMobile-tamplate .delivery b {
-    color: #f4f4f5;
-    font-weight: 700;
+  color: #f4f4f5;
+  font-weight: 700;
 }
 
 /* ===== LIMITED STOCK ===== */
 
 .grid-samsungMobile-tamplate .stock {
-    color: #fb7185;
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 6px 0;
+  color: #fb7185;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 6px 0;
 }
 
 /* ===== ADD TO CART BUTTON ===== */
 
 .grid-samsungMobile-tamplate .cart {
-    display: block;
-    width: 100%;
-    padding: 10px 8px;
-    margin-top: 12px;
-    border: 1px solid #facc15;
-    border-radius: 25px;
-    background: #facc15;
-    color: #18181b;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease,
-                box-shadow 0.2s ease,
-                transform 0.2s ease;
+  display: block;
+  width: 100%;
+  padding: 10px 8px;
+  margin-top: 12px;
+  border: 1px solid #facc15;
+  border-radius: 25px;
+  background: #facc15;
+  color: #18181b;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .grid-samsungMobile-tamplate .cart:hover {
-    background: #fde047;
-    box-shadow: 0 3px 12px rgba(250, 204, 21, 0.18);
+  background: #fde047;
+  box-shadow: 0 3px 12px rgba(250, 204, 21, 0.18);
 }
 
 .grid-samsungMobile-tamplate .cart:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 /* ===== PRICE DETAILS ===== */
 
 .grid-samsungMobile-tamplate .price small {
-    color: #a1a1aa;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.7;
+  color: #a1a1aa;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .grid-samsungMobile-tamplate .price small s {
-    color: #71717a;
+  color: #71717a;
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
 
 @media (max-width: 600px) {
-    .grid-samsungMobile-tamplate .badge {
-        font-size: 10px;
-        padding: 4px 6px;
-    }
+  .grid-samsungMobile-tamplate .badge {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
 
-    .grid-samsungMobile-tamplate .color-dots {
-        gap: 8px;
-    }
+  .grid-samsungMobile-tamplate .color-dots {
+    gap: 8px;
+  }
 
-    .grid-samsungMobile-tamplate .color-dots i {
-        width: 16px;
-        height: 16px;
-    }
+  .grid-samsungMobile-tamplate .color-dots i {
+    width: 16px;
+    height: 16px;
+  }
 
-    .grid-samsungMobile-tamplate .cart {
-        padding: 9px 5px;
-        font-size: 12px;
-    }
+  .grid-samsungMobile-tamplate .cart {
+    padding: 9px 5px;
+    font-size: 12px;
+  }
 
-    .grid-samsungMobile-tamplate .delivery {
-        font-size: 11px;
-    }
+  .grid-samsungMobile-tamplate .delivery {
+    font-size: 11px;
+  }
 
-    .grid-samsungMobile-tamplate .coupon {
-        font-size: 11px;
-    }
+  .grid-samsungMobile-tamplate .coupon {
+    font-size: 11px;
+  }
 }
 
 .product-section[hidden] {
-    display: none !important;
+  display: none !important;
 }
+
 /* ---------------------------------------------All Product---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Laptop category switch + dark-theme laptop cards */
 /* Keep existing E-commerceStylish.css as the main stylesheet. */
-.product-main[hidden] { display: none !important; }
-.category-item[data-category] { cursor: pointer; }
-.category-item[data-category]:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
-.category-item[data-category].active { color:cyan; }
-
-.laptop-product-main,.headphone-product-main { min-width: 0; }
-.laptop-product-main .product-results,.headphone-product-main .product-results { min-width: 0; }
-.laptop-category-banner,.headphone-category-banner {
-    display:flex; align-items:center; justify-content:space-between; gap:22px;
-    margin: 10px 0 20px; padding: 24px 28px; border:1px solid transparent; background:linear-gradient(#080b18, #080b18) padding-box, linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
-  border: 1px solid transparent; border-radius:5px;
-    /* background: linear-gradient(120deg, rgba(0,234,255,0.08) 0%, rgba(107,53,255,0.08) 55%, rgba(255,0,255,0.08) 100%); color:#f5f5f5; */
+.product-main[hidden] {
+  display: none !important;
 }
-.laptop-eyebrow,.headphone-eyebrow { margin:0 0 8px; color: var(--cyan); font-size:11px; font-weight:800; letter-spacing:1.5px; }
-.laptop-category-banner h1,.headphone-category-banner h1 { margin:0 0 7px; color:#fff; font-size:clamp(24px,3vw,36px); line-height:1.15; }
-.laptop-category-banner p:last-child,.headphone-category-banner p:last-child { margin:0; color:#bdbdbd; font-size:14px; }
-.laptop-banner-icon,.headphone-banner-icon { display:grid; place-items:center; flex:0 0 76px; width:76px; height:76px; border-radius:18px; color:#ffad33; background:#30271a; font-size:36px; }
-.laptop-toolbar,.headphone-toolbar {justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin:0 0 15px; color:#f2f2f2; }
-.laptop-toolbar strong,.headphone-toolbar strong { font-size:18px; }
-.laptop-toolbar span,.headphone-toolbar span { color:#aaa; font-size:12px; }
-.laptop-delivery-note,.headphone-delivery-note { display:flex; align-items:center; gap:7px; }
-.laptop-delivery-note i,.headphone-delivery-note i { color:var(--cyan); }
-.laptop-product-grid,.headphone-product-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
-.laptop-card,.headphone-card { min-width:0; overflow:hidden; display:flex; flex-direction:column; border:1px solid transparent; background:linear-gradient(#080b18, #080b18) padding-box, linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box; border-radius:5px; color:#f4f4f4; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
-.laptop-card:hover,.headphone-card:hover { transform:translateY(-1px); border-color:var(--cyan); box-shadow:0 10px 24px #0004; }
-.laptop-card-image,.headphone-card-image { position:relative; display:flex; align-items:center; justify-content:center; height:190px; padding:15px; overflow:hidden; background:#f7f7f7; }
-.laptop-card-image img,.headphone-card-image img { width:100%; height:100%; object-fit:contain; }
-.laptop-tag,.headphone-tag { position:absolute; z-index:1; top:10px; left:10px; padding:5px 8px; border-radius:4px; background:#ff9900; color:#151515; font-size:9px; font-weight:900; letter-spacing:.5px; }
-.laptop-tag-deal,.headphone-tag-deal { background:#d8f3dc; }
-.laptop-tag-gaming,.headphone-tag-gaming { background:#d8d7ff; }
-.laptop-card-info,.headphone-card-info { display:flex; flex:1; flex-direction:column; padding:15px; }
-.laptop-brand,.headphone-brand { margin:0 0 6px; color:#ff4500; font-size:15x; font-weight:800; text-transform:uppercase; letter-spacing:.8px; }
-.laptop-card-info h2,.headphone-card-info h2 { margin:0 0 10px; color:#f5f5f5; font-size:15px; line-height:1.45; font-weight:650; }
-.laptop-rating,.headphone-rating { margin:0 0 8px; color:#e8e8e8; font-size:12px; }
-.laptop-rating span,.headphone-rating span { color:#ffb21c; letter-spacing:1px; }
-.laptop-rating small,.headphone-rating small { color:#aaa; }
-.laptop-bought,.headphone-bought { margin:0 0 12px; color:#a8a8a8; font-size:11px; }
-.laptop-price,.headphone-price { display:flex; flex-wrap:wrap; align-items:baseline; gap:7px; margin:0 0 7px; color:#fff; font-size:22px; font-weight:800; }
-.laptop-price del,.headphone-price del { color:#999; font-size:11px; font-weight:400; }
-.laptop-price b,.headphone-price b { color:#ff9d47; font-size:11px; font-weight:700; }
-.laptop-emi,.headphone-emi { margin:0 0 7px; color:#c5c5c5; font-size:11px; }
-.laptop-delivery,.headphone-delivery { margin:0 0 14px; color:#c5c5c5; font-size:11px; }
-.laptop-delivery strong,.headphone-delivery strong { color:#f2f2f2; }
-.laptop-cart-btn,.headphone-cart-btn { width:100%; min-height:40px; margin-top:auto; padding:10px 12px; border:0; border-radius:7px; background:#ffd814; color:#191919; font-size:13px; font-weight:500; cursor:pointer; transition:background .2s ease; }
-.laptop-cart-btn:hover,.headphone-cart-btn:hover { background:#f7ca00; }
-.laptop-cart-btn:focus-visible,.headphone-cart-btn:focus-visible { outline:2px solid #fff; outline-offset:2px; }
-.laptop-disclaimer,.headphone-disclaimer { margin:16px 0; color:#888; font-size:11px; line-height:1.5; }
-@media (max-width:1100px) { .laptop-product-grid,.headphone-product-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+
+.category-item[data-category] {
+  cursor: pointer;
+}
+
+.category-item[data-category]:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.category-item[data-category].active {
+  color: cyan;
+}
+
+.laptop-product-main,
+.headphone-product-main {
+  min-width: 0;
+}
+
+.laptop-product-main .product-results,
+.headphone-product-main .product-results {
+  min-width: 0;
+}
+
+.laptop-category-banner,
+.headphone-category-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin: 10px 0 20px;
+  padding: 24px 28px;
+  border: 1px solid transparent;
+  background: linear-gradient(#080b18, #080b18) padding-box, linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  /* background: linear-gradient(120deg, rgba(0,234,255,0.08) 0%, rgba(107,53,255,0.08) 55%, rgba(255,0,255,0.08) 100%); color:#f5f5f5; */
+}
+
+.laptop-eyebrow,
+.headphone-eyebrow {
+  margin: 0 0 8px;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.laptop-category-banner h1,
+.headphone-category-banner h1 {
+  margin: 0 0 7px;
+  color: #fff;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.15;
+}
+
+.laptop-category-banner p:last-child,
+.headphone-category-banner p:last-child {
+  margin: 0;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.laptop-banner-icon,
+.headphone-banner-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 76px;
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  color: #ffad33;
+  background: #30271a;
+  font-size: 36px;
+}
+
+.laptop-toolbar,
+.headphone-toolbar {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 15px;
+  color: #f2f2f2;
+}
+
+.laptop-toolbar strong,
+.headphone-toolbar strong {
+  font-size: 18px;
+}
+
+.laptop-toolbar span,
+.headphone-toolbar span {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.laptop-delivery-note,
+.headphone-delivery-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.laptop-delivery-note i,
+.headphone-delivery-note i {
+  color: var(--cyan);
+}
+
+.laptop-product-grid,
+.headphone-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.laptop-card,
+.headphone-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  background: linear-gradient(#080b18, #080b18) padding-box, linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
+  border-radius: 5px;
+  color: #f4f4f4;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.laptop-card:hover,
+.headphone-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--cyan);
+  box-shadow: 0 10px 24px #0004;
+}
+
+.laptop-card-image,
+.headphone-card-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  padding: 15px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.laptop-card-image img,
+.headphone-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.laptop-tag,
+.headphone-tag {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #ff9900;
+  color: #151515;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+.laptop-tag-deal,
+.headphone-tag-deal {
+  background: #d8f3dc;
+}
+
+.laptop-tag-gaming,
+.headphone-tag-gaming {
+  background: #d8d7ff;
+}
+
+.laptop-card-info,
+.headphone-card-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.laptop-brand,
+.headphone-brand {
+  margin: 0 0 6px;
+  color: #ff4500;
+  font-size: 15x;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.laptop-card-info h2,
+.headphone-card-info h2 {
+  margin: 0 0 10px;
+  color: #f5f5f5;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 650;
+}
+
+.laptop-rating,
+.headphone-rating {
+  margin: 0 0 8px;
+  color: #e8e8e8;
+  font-size: 12px;
+}
+
+.laptop-rating span,
+.headphone-rating span {
+  color: #ffb21c;
+  letter-spacing: 1px;
+}
+
+.laptop-rating small,
+.headphone-rating small {
+  color: #aaa;
+}
+
+.laptop-bought,
+.headphone-bought {
+  margin: 0 0 12px;
+  color: #a8a8a8;
+  font-size: 11px;
+}
+
+.laptop-price,
+.headphone-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 7px;
+  margin: 0 0 7px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.laptop-price del,
+.headphone-price del {
+  color: #999;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.laptop-price b,
+.headphone-price b {
+  color: #ff9d47;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.laptop-emi,
+.headphone-emi {
+  margin: 0 0 7px;
+  color: #c5c5c5;
+  font-size: 11px;
+}
+
+.laptop-delivery,
+.headphone-delivery {
+  margin: 0 0 14px;
+  color: #c5c5c5;
+  font-size: 11px;
+}
+
+.laptop-delivery strong,
+.headphone-delivery strong {
+  color: #f2f2f2;
+}
+
+.laptop-cart-btn,
+.headphone-cart-btn {
+  width: 100%;
+  min-height: 40px;
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 7px;
+  background: #ffd814;
+  color: #191919;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.laptop-cart-btn:hover,
+.headphone-cart-btn:hover {
+  background: #f7ca00;
+}
+
+.laptop-cart-btn:focus-visible,
+.headphone-cart-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.laptop-disclaimer,
+.headphone-disclaimer {
+  margin: 16px 0;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+@media (max-width:1100px) {
+
+  .laptop-product-grid,
+  .headphone-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (max-width:650px) {
- .laptop-category-banner { padding:18px; }
- .laptop-banner-icon { flex-basis:54px; width:54px; height:54px; border-radius:13px; font-size:26px; }
- .laptop-product-grid { grid-template-columns:1fr; }
- .laptop-card { display:grid; grid-template-columns:115px minmax(0,1fr); }
- .laptop-card-image { height:100%; min-height:180px; padding:8px; }
- .laptop-tag { top:6px; left:6px; font-size:7px; padding:4px; }
- .laptop-card-info { padding:12px; }
- .laptop-card-info h2 { font-size:13px; }
- .laptop-price { font-size:18px; }
-}
-/* --------------------------------------------------------------------------------------------- */
-#laptop-product{width:100%;max-width:1015px;min-height:308px;display:flex;background:transparent;overflow:hidden; border:1px solid transparent; background:linear-gradient(#080b18, #080b18) padding-box, linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box; margin-top:20px; transition:0s ease-in-out; border-radius:5px; &:hover{transform:translateY(0px);}}
-.laptop-visual{width:33%;min-width:300px;background:#f7f7f7;display:flex;justify-content:center;align-items:center;padding:10px; color:var(--white);}
-.laptop-photo{width:100%;max-width:300px;height:280px;object-fit:contain;mix-blend-mode:multiply;background:transparent;}
-.laptop-info{flex:1;padding:10px 13px;min-width:0;}
-.laptop-title{font-size:16px;font-weight:400;line-height:27px;color:#ffffff;margin-bottom:8px}
-.laptop-rating{display:flex;align-items:center;gap:4px;margin-bottom:9px;font-size:13px}
-.laptop-stars{color:#f07824;font-size:17px;letter-spacing:-2px; position: relative; bottom:2px;}
-.laptop-arrow{font-size:17px;font-weight:bold}
-.laptop-reviews{color:#007185;margin-left:1px}
-.laptop-festival{display:inline-block;background:#c8102e;color:#fff;font-size:14px;font-weight:bold;padding:7px 10px;border-radius:2px;margin-bottom:8px}
-.laptop-price-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px;color:#111}
-.laptop-currency{font-size:20px; color:#ffffff; position: relative; bottom:10px; left:5px;}
-.laptop-price{font-size:31px;font-weight:400}
-.laptop-mrp{font-size:14px;color:silver}
-.laptop-discount{font-size:14px;color:#ffffff;line-break: loose;}
-.laptop-bank-offer{font-size:15px;color:#ffffff;margin-top:0px;margin-bottom:10px}
-.laptop-delivery{font-size:13px;color:#111;margin-bottom:15px; color:#ffffff;}
-.laptop-cart-button{width:333px;max-width:100%;height:36px;background:#ffd814;border:none;border-radius:22px;color:#111;font-size:16px;cursor:pointer}
-.laptop-cart-button:hover{background:#f7ca00}
-@media(max-width:700px){#laptop-product{flex-direction:column}.laptop-visual{width:100%;min-width:0;height:250px}.laptop-photo{height:230px}.laptop-info{padding:15px}.laptop-title{font-size:18px;line-height:25px}.laptop-price{font-size:28px}.laptop-cart-button{width:100%}}
+  .laptop-category-banner {
+    padding: 18px;
+  }
 
-#laptop-product{position:relative;}.bestSellerBox{position:absolute;display:flex;align-items:center;gap:8px; cursor:default;}.bestSellerBox p{border:1px solid orangered;margin:5px;padding:2px;font-size:12px;background-color:orangered;border-radius:5px;color:white;position:relative;z-index:1;}.slide-text{font-size:12px;color:orangered;white-space:nowrap;transform:translateX(-30px);opacity:0;transition:transform 0.5s ease,opacity 1s ease;}.bestSellerBox:hover .slide-text{transform:translateX(0);opacity:1;}
+  .laptop-banner-icon {
+    flex-basis: 54px;
+    width: 54px;
+    height: 54px;
+    border-radius: 13px;
+    font-size: 26px;
+  }
+
+  .laptop-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laptop-card {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+  }
+
+  .laptop-card-image {
+    height: 100%;
+    min-height: 180px;
+    padding: 8px;
+  }
+
+  .laptop-tag {
+    top: 6px;
+    left: 6px;
+    font-size: 7px;
+    padding: 4px;
+  }
+
+  .laptop-card-info {
+    padding: 12px;
+  }
+
+  .laptop-card-info h2 {
+    font-size: 13px;
+  }
+
+  .laptop-price {
+    font-size: 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+#laptop-product {
+  width: 100%;
+  max-width: 1015px;
+  min-height: 308px;
+  display: flex;
+  background: transparent;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background: linear-gradient(#080b18, #080b18) padding-box, linear-gradient(90deg, #00eaff, #6b35ff, #ff00d9) border-box;
+  margin-top: 20px;
+  transition: 0s ease-in-out;
+  border-radius: 5px;
+
+  &:hover {
+    transform: translateY(0px);
+  }
+}
+
+.laptop-visual {
+  width: 33%;
+  min-width: 300px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: var(--white);
+}
+
+.laptop-photo {
+  width: 100%;
+  max-width: 300px;
+  height: 280px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  background: transparent;
+}
+
+.laptop-info {
+  flex: 1;
+  padding: 10px 13px;
+  min-width: 0;
+}
+
+.laptop-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #ffffff;
+  margin-bottom: 8px
+}
+
+.laptop-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 9px;
+  font-size: 13px
+}
+
+.laptop-stars {
+  color: #f07824;
+  font-size: 17px;
+  letter-spacing: -2px;
+  position: relative;
+  bottom: 2px;
+}
+
+.laptop-arrow {
+  font-size: 17px;
+  font-weight: bold
+}
+
+.laptop-reviews {
+  color: #007185;
+  margin-left: 1px
+}
+
+.laptop-festival {
+  display: inline-block;
+  background: #c8102e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 10px;
+  border-radius: 2px;
+  margin-bottom: 8px
+}
+
+.laptop-price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: #111
+}
+
+.laptop-currency {
+  font-size: 20px;
+  color: #ffffff;
+  position: relative;
+  bottom: 10px;
+  left: 5px;
+}
+
+.laptop-price {
+  font-size: 31px;
+  font-weight: 400
+}
+
+.laptop-mrp {
+  font-size: 14px;
+  color: silver
+}
+
+.laptop-discount {
+  font-size: 14px;
+  color: #ffffff;
+  line-break: loose;
+}
+
+.laptop-bank-offer {
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 10px
+}
+
+.laptop-delivery {
+  font-size: 13px;
+  color: #111;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.laptop-cart-button {
+  width: 333px;
+  max-width: 100%;
+  height: 36px;
+  background: #ffd814;
+  border: none;
+  border-radius: 22px;
+  color: #111;
+  font-size: 16px;
+  cursor: pointer
+}
+
+.laptop-cart-button:hover {
+  background: #f7ca00
+}
+
+@media(max-width:700px) {
+  #laptop-product {
+    flex-direction: column
+  }
+
+  .laptop-visual {
+    width: 100%;
+    min-width: 0;
+    height: 250px
+  }
+
+  .laptop-photo {
+    height: 230px
+  }
+
+  .laptop-info {
+    padding: 15px
+  }
+
+  .laptop-title {
+    font-size: 18px;
+    line-height: 25px
+  }
+
+  .laptop-price {
+    font-size: 28px
+  }
+
+  .laptop-cart-button {
+    width: 100%
+  }
+}
+
+/* Responsive primary navigation */
+.nav-toggle {
+  display: none;
+  min-width: 42px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00eaff;
+  border-radius: 8px;
+  background: transparent;
+  color: #00eaff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible,
+.theme-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  .header-containerNavigation-cart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 14px;
+  }
+
+  .header-container_Navbar {
+    flex: 1 1 auto;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .nav-list {
+    display: none;
+    position: static;
+    right: auto;
+    order: 3;
+    flex: 1 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0;
+    border-top: 1px solid #1a758e;
+  }
+
+  .nav-list.is-open {
+    display: flex;
+  }
+
+  .nav-list ul {
+    min-height: 42px;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  .nav-list li::after {
+    top: auto;
+    bottom: 3px;
+  }
+
+  .nav-list .custom-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-list .dropdown-btn {
+    min-height: 42px;
+  }
+
+  .nav-list .dropdown-menu {
+    position: static;
+    width: 100%;
+    max-height: 180px;
+    margin-bottom: 8px;
+  }
+
+  .header-ContanerSearchItem {
+    order: 2;
+    flex: 1 0 100%;
+    min-width: 0;
+  }
+
+  .search_products {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .header-ContanerSearchItem input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    padding: 8px 12px;
+  }
+
+  .header-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    align-items: center;
+  }
+
+  .header-container p {
+    font-size: 12px;
+  }
+
+  .theme-btn {
+    flex: 0 0 30px;
+    left: 0;
+    margin-left: 4px;
+  }
+
+  .header-container-logIn {
+    font-size: 12px;
+  }
+
+  .header-container-logIn ul {
+    align-items: center;
+  }
+
+  .header-container-logIn li {
+    margin: 0 4px;
+  }
+
+  .header-container-logIn li:nth-of-type(-n + 2) {
+    display: none;
+  }
+
+  .header-containerNavigation-cart {
+    padding: 9px 10px;
+  }
+
+  .header-container_Navbar .productTitile {
+    display: none;
+  }
+
+  .rating_logContent {
+    gap: 8px;
+  }
+}
+
+#laptop-product {
+  position: relative;
+}
+
+.bestSellerBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+}
+
+.bestSellerBox p {
+  border: 1px solid orangered;
+  margin: 5px;
+  padding: 2px;
+  font-size: 12px;
+  background-color: orangered;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.slide-text {
+  font-size: 12px;
+  color: orangered;
+  white-space: nowrap;
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 1s ease;
+}
+
+.bestSellerBox:hover .slide-text {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ---------------------------------- End  -------------------------------- */
