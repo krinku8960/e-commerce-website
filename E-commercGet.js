@@ -598,26 +598,6 @@ setInterval(function () {
    
 }, 800);
 
-//website theme Change ----------------------------->
-
-const themeBtn = document.getElementById("themeBtn");
-const themeIcon = themeBtn.querySelector("i");
-
-themeBtn.addEventListener("click", () => {
-    const isLightTheme = document.body.classList.toggle("light-theme");
-    themeBtn.setAttribute("aria-pressed", isLightTheme);
-    themeBtn.title = isLightTheme ? "Switch to dark theme" : "Switch to light theme";
-    themeBtn.setAttribute("aria-label", themeBtn.title);
-
-    if (isLightTheme) {
-        themeIcon.classList.remove( "fa-moon");
-        themeIcon.classList.add("fa-sun");
-    } else {
-        themeIcon.classList.remove("fa-sun");
-        themeIcon.classList.add("fa-moon");
-    }
-});
-
 // shop_product Item are click this nav box ---- this smooth scroll event are Shop item  --------------------->
 
 function ShopProduct_item() {
@@ -654,7 +634,7 @@ function ShopProduct_item() {
    const homeButton = document.getElementById("homeBtn");
         const pageTransition = document.getElementById("pageTransition");
 
-        homeButton.addEventListener("click", (event) => {
+        if (homeButton && pageTransition) homeButton.addEventListener("click", (event) => {
             if (
                 event.button !== 0 ||
                 event.metaKey ||

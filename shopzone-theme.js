@@ -1,77 +1,51 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.getElementById("navToggle");
-    const navigation = document.getElementById("primaryNavigation");
-    const themeButton = document.getElementById("themeBtn");
-    const root = document.documentElement;
+const shopZoneThemeKey = "shopzone-theme";
+const themeButtons = document.querySelectorAll("#themeBtn, .site-theme-toggle");
+const menuToggles = document.querySelectorAll("[data-menu-toggle]");
 
-    // Responsive navigation menu
-    if (menuButton && navigation) {
-        menuButton.addEventListener("click", function () {
-            const isOpen = navigation.classList.toggle("is-open");
+function applyShopZoneTheme(theme) {
+  const isLight = theme === "light";
+  document.body.classList.toggle("light-theme", isLight);
+  document.body.dataset.theme = isLight ? "light" : "dark";
 
-            menuButton.setAttribute("aria-expanded", String(isOpen));
-            menuButton.setAttribute(
-                "aria-label",
-                isOpen ? "Close navigation" : "Open navigation"
-            );
+  themeButtons.forEach((button) => {
+    const label = isLight ? "Switch to dark theme" : "Switch to light theme";
+    button.setAttribute("aria-label", label);
+    button.setAttribute("title", label);
+    button.setAttribute("aria-pressed", String(isLight));
 
-            menuButton.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
-                : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
-        });
-
-        navigation.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navigation.classList.remove("is-open");
-                menuButton.setAttribute("aria-expanded", "false");
-            });
-        });
+    const icon = button.querySelector("i");
+    if (icon) {
+      icon.classList.toggle("fa-sun", isLight);
+      icon.classList.toggle("fa-moon", !isLight);
     }
+  });
+}
 
-    // Dark and light theme
-    function applyTheme(theme) {
-        root.setAttribute("data-theme", theme);
+applyShopZoneTheme(localStorage.getItem(shopZoneThemeKey) === "light" ? "light" : "dark");
 
-        if (themeButton) {
-            const isLight = theme === "light";
-            themeButton.innerHTML = isLight
-                ? '<i class="fa-solid fa-sun" aria-hidden="true"></i>'
-                : '<i class="fa-solid fa-moon" aria-hidden="true"></i>';
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const nextTheme = document.body.classList.contains("light-theme") ? "dark" : "light";
+    applyShopZoneTheme(nextTheme);
+    localStorage.setItem(shopZoneThemeKey, nextTheme);
+  });
+});
 
-            themeButton.setAttribute(
-                "aria-label",
-                isLight ? "Switch to dark theme" : "Switch to light theme"
-            );
-            themeButton.setAttribute(
-                "title",
-                isLight ? "Switch to dark theme" : "Switch to light theme"
-            );
-            themeButton.setAttribute("aria-pressed", String(isLight));
-        }
+menuToggles.forEach((button) => {
+  const menu = document.getElementById(button.getAttribute("aria-controls"));
+  if (!menu) return;
+
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    button.setAttribute("aria-label", isExpanded ? "Open navigation" : "Close navigation");
+    menu.classList.toggle("is-open", !isExpanded);
+    menu.classList.toggle("open", !isExpanded);
+
+    const icon = button.querySelector("i");
+    if (icon) {
+      icon.classList.toggle("fa-bars", isExpanded);
+      icon.classList.toggle("fa-xmark", !isExpanded);
     }
-
-    let savedTheme = "dark";
-
-    try {
-        savedTheme = localStorage.getItem("shopzone-theme") || "dark";
-    } catch (error) {
-        // Continue if browser storage is unavailable.
-    }
-
-    applyTheme(savedTheme);
-
-    if (themeButton) {
-        themeButton.addEventListener("click", function () {
-            const nextTheme =
-                root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
-            applyTheme(nextTheme);
-
-            try {
-                localStorage.setItem("shopzone-theme", nextTheme);
-            } catch (error) {
-                // Theme still works for the current page.
-            }
-        });
-    }
+  });
 });

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ShopZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="shopzone-theme.css">
+    <script src="shopzone-theme.js" defer></script>
 
     <style>
         * {
@@ -334,10 +337,13 @@
 
         </div>
 
+        <button class="prototype-menu-toggle" type="button" aria-controls="prototypeNav" aria-expanded="false" aria-label="Open navigation" data-menu-toggle>
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
 
         <!-- TOP MENU -->
 
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="prototypeNav" data-collapsible-menu>
 
             <li>
                 <a href="#" class="active">
@@ -519,6 +525,9 @@
         </p>
 
     </main>
+    <button class="site-theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+    </button>
     <script>
      function loginFromPageOpen() {
     document.getElementById("loginPopup").style.display = "flex";
