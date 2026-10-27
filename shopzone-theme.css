@@ -1,0 +1,60 @@
+﻿/* ShopZone responsive menu and theme support */
+
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .header-containerNavigation-cart {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.is-open {
+        display: flex;
+    }
+}
+
+/* Light theme */
+html[data-theme="light"] body {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+html[data-theme="light"] .header,
+html[data-theme="light"] .header-containerNavigation-cart {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+html[data-theme="light"] .nav-list {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+html[data-theme="light"] .nav-list a {
+    color: #222222;
+}
+
+html[data-theme="light"] .theme-btn,
+html[data-theme="light"] .nav-toggle {
+    color: #222222;
+    border-color: #222222;
+}
