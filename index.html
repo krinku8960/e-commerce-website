@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="E-commerceStylish.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Frijole&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Frijole&family=Lalezar&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Frijole&family=Lalezar&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header" id="homeSectionLink_click">
+            <div class="header-container">
+                <i class="fa-solid fa-truck-fast"></i>
+                <p><span>Free Sipping</span> on all oders over ₹999</p>
+<button class="theme-btn" id="themeBtn" type="button" title="Switch to light theme" aria-label="Switch to light theme" aria-pressed="false">
+    <i class="fa-solid fa-moon"></i>
+</button>
+            </div>
+            <div class="header-container-logIn">
+                <ul>
+                    <li>Treck Oder</li> |
+                    <li>Help </li> |
+                    <li onclick="openLogin()"><i class="fa-solid fa-user"></i>Login/Ragister</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-containerNavigation-cart">
+            <!------------------------------ header-container_Navbar start ---------------------------------->
+            <div class="header-container_Navbar">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Shop<span class="highlight-text">Zone</span></h3>
+                <div class="productTitile">
+                    <p>Better product<li>Better Life</li>
+                    </p>
+                </div>
+            </div>
+            <!------------------------------ header-container_Navbar start end---------------------------------->
+            <div class="nav-list">
+                <ul>
+                    <li id="home_bdr" class="active" style="border-bottom:2px solid rgb(0, 255, 255); border-radius:1px; margin-top:4px;">Home</li>
+                </ul>
+                <ul>
+                    <li onclick="ShopProduct_item()">Shop</li>
+                </ul>
+                <ul class="custom-dropdown">
+                    <li class="dropdown-btn">
+                        <span class="selected-text">Category</span>
+                        <i class="fa-solid fa-chevron-down" style="color:#ffffff;"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                        </div>
+                </ul>
+                </li>
+                <ul>
+                    <li>about</li>
+                </ul>
+                <ul>
+                    <li><a href="ContactUS.html">Contact</a></li>
+                </ul>
+
+            </div>
+            <div class="header-ContanerSearchItem">
+                <div class="search_products">
+                    <input type="text" placeholder="Search for products...">
+                    <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="rating_logContent">
+                    <div class="logIn_button" onclick="openLogin()">
+                        <i class="fa-solid fa-user"></i>Login<span></span>
+                    </div>
+                    <div class="cart_rating">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="heroContaienr_themeIamge">
+                <div class="imageText_WithBtn_include">
+                    <p>Up TO 50% OFF</p>
+                    <h1>Upgrade Your</h1>
+                    <h1 class="lifestyle">Lifestyle</h1>
+                    <span>Latest gadgest, fashion, and more - all in one plece. <br>shop smart live better.</span><br>
+                    <button type="button">Shop Now<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="flexProduct-group">
+                <div class="flex-ProductCard">
+                    <img src="E-iamgeitem/71110KALB5L._AC_SL1500_-removebg-preview.png" alt="">
+                    <div class="textProductForBtn-flex_one">
+                        <h4>Best Audio<br><span>Up to 40% Off</span></h4>
+                        <button type="button">Shop Now<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="flex-ProductCard">
+                    <img src="E-iamgeitem/61X8AQHwgTL._AC_SY675_-removebg-preview.png" alt="">
+                    <div class="textProductForBtn-flex_two">
+                        <h4>Trendy Footwear<br>Up to 50% Off</h4>
+                        <button type="button">Shop Now<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="flex-ProductCard">
+                    <img src="E-iamgeitem/61kQKDMlzOL._AC_UY327_FMwebp_QL65_-removebg-preview.png" alt="">
+                    <div class="textProductForBtn-flex_three">
+                        <h4>Samrt Watches<br><span>Up to 45% Off</span></h4>
+                        <button type="button">Shop Now<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==================== Help Center Main Container ==================== -->
+        <div class="helpCenter-container">
+            <div class="helpCenterItemBox_content">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div>
+                    <p>Free Shipping</p><span>On all orders over ₹999</span>
+                </div>
+            </div>
+            <div class="helpCenterItemBox_content">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <p>Secure Payment</p><span>100% secure checkout</span>
+                </div>
+            </div>
+            <div class="helpCenterItemBox_content">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <div>
+                    <p>Easy Returns</p><span>Within 7 days</span>
+                </div>
+            </div>
+            <div class="helpCenterItemBox_content">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <p>24/7 Support</p><span>We're here to help</span>
+                </div>
+            </div>
+        </div>
+        <!-- ==================== Help Center Main Container End==================== -->
+
+        <!-- LogIn ---- SingnUpFrom -->
+        <!-- ================= LOGIN POPUP ================= -->
+
+        <div class="popup" id="loginPopup">
+
+            <span class="close-btn" onclick="closeForms()">&times;</span>
+            <form class="form-box" id="loginForm">
+                <h2>Log In</h2>
+                <div class="input-box"><i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter email" required />
+                </div>
+                <div class="input-box"><i class="fa-solid fa-user-lock"></i>
+                    <input type="password" placeholder="Enter password" required />
+                </div>
+                <button class="submit-btn" type="submit">Log In </button>
+                <div class="or-divider">
+                    <span>OR</span>
+                </div>
+                <div class="LogInFlex-btn">
+                    <div class="goolgleUser-Btn"><a href="https://accounts.google.com/"><i
+                                class="fa-brands fa-google"></i></a></div>
+                    <div class="MacUser-Btn"><a
+                            href="https://appleid.apple.com/auth/authorize?client_id=com.github.social-oidc&redirect_uri=https%3A%2F%2Fgithub.com%2Fsessions%2Fsocial%2Fapple%2Fcallback&nonce=77e362bd60f303b82e14e0da1b716119&state=0040f15b1938d6d90ae33f2098a248d0&scope=email&response_mode=form_post&response_type=code"><i
+                                class="fa-brands fa-apple"></i></a></div>
+                    <div class="gitUser-Btn"><a href="https://github.com/login"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="switch-form"> Don't have an account? <span onclick="openSignup()"> Sign Up</span>
+                </div>
+            </form>
+        </div>
+        <!-- ================= SIGNUP POPUP ================= -->
+
+        <div class="popup_SignUp" id="signupPopup"><span class="close-btn_signUp" onclick="closeForms()">&times;</span>
+            <form class="form-box_SignUp" id="signupForm">
+                <h2>Sign Up</h2>
+               <div class="inputflexBox_display">
+                <div class="flexUser_Email">
+                <div class="input-box_SignUp">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="userNames" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box_SignUp"><i class="fa-regular fa-envelope"></i><input type="email" id="Email@id"
+                        placeholder="Email address" required>
+                </div>
+                </div>
+                 <div class="password_confirmPass">
+                <div class="input-box_SignUp"><i class="fa-solid fa-user-lock"></i><input type="password" id="Password"
+                        placeholder="Password" required>
+                </div>
+                <div class="input-box_SignUp"><i class="fa-solid fa-user-lock"></i><input type="password" id="ConfirmPassword"
+                        placeholder="Confirm Password" required></div></div>
+                        </div>
+                       <div class="checkBox_userConfirm">
+                        <input type="checkbox" id="checkBoxHanddle" required><p>I agree to the <span style="color:blue;">Terms of Service <span style="color:#ffffff;"> and </span>Privacy Policy</span></p>
+                       </div>
+                       
+                <div class="or-divider">
+                    <span>OR</span>
+                </div>
+                <div class="LogInFlex-btn">
+                    <div class="goolgleUser-Btn"><a href="https://accounts.google.com/"><i
+                                class="fa-brands fa-google"></i></a></div>
+                    <div class="MacUser-Btn"><a
+                            href="https://appleid.apple.com/auth/authorize?client_id=com.github.social-oidc&redirect_uri=https%3A%2F%2Fgithub.com%2Fsessions%2Fsocial%2Fapple%2Fcallback&nonce=77e362bd60f303b82e14e0da1b716119&state=0040f15b1938d6d90ae33f2098a248d0&scope=email&response_mode=form_post&response_type=code"><i
+                                class="fa-brands fa-apple"></i></a></div>
+                    <div class="gitUser-Btn"><a href="https://github.com/login"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <button class="submit-btn" id="PasswordMatch" type="submit"> Sign Up </button>
+                <div class="switch-form"> Already have an account? <span onclick="openLogin()"> Log In </span>
+                </div>
+            </form>
+        </div>
+          <div class="shopByCatagory_container" id="shopByCatagory_container" data-aos="fade-up">
+                <h2><span style="border-bottom:2px solid cyan; border-radius:2px;">Shop</span> By Category</h2>
+                <div class="shopCaintainerItem-Group">
+                    <div id="MobileContaienr-group"><img width="70" height="60" src="https://img.icons8.com/ios-glyphs/90/iphone.png" alt="mobiles"/><p>Mobiles</p></div>
+                    <div><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/laptop.png" alt="laptop"/><p>Leptops</p></div>
+                    <div><img width="48" height="48" src="https://img.icons8.com/fluency-systems-regular/48/headphones.png" alt="headphones"/><p>Headphones</p></div>
+                    <div><img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/apple-watch-apps.png" alt="apple-watch-apps"/><p>Smart Watches</p></div>
+                    <div><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/t-shirt-on-hanger.png" alt="t-shirt-on-hanger"/><p>Fashion</p></div>
+                    <div><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/mens-shoe.png" alt="mens-shoe"/><p>Footwear</p></div>
+                    <div><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/home-page--v1.png" alt="home-page--v1"/><p>Home & Living</p></div>
+                    <div><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/shaving-cream.png" alt="shaving-cream"/><p>Beauty</p></div>
+                    <div><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/dumbbell.png" alt="dumbbell"/><p>Sport</p></div>
+                    <div><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/xbox-controller.png" alt="xbox-controller"/><p>Game</p></div>
+                    <div id="Grid_View_more"><img srcset="https://img.icons8.com/?size=16&amp;id=13715&amp;format=png 1x, https://img.icons8.com/?size=32&amp;id=13715&amp;format=png 2x" alt="grid view" class="_icon-img_z4xik_158" aria-hidden="true"><p>More<i class="fa-solid fa-arrow-right" style="color:#ffffff; margin-left:5px; font-weight:bold; text-align:center;"></i></p></div>
+                </div>
+ <!-- =============shop by category ==================================== -->
+                 <div class="hide_shopCatagroy" id="show_shopCategory">
+                    <div class="page-shell">
+    <section class="category-section">
+      <div class="category-grid">
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Mobile/1.png" alt="" id="productImage_Mobile"></div>
+          <div class="text-box">
+            <h3>Mobiles</h3>
+            <p>Latest Smartphones</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/leptopImage/1.png" alt="" id="productImage_leptop"></div>
+          <div class="text-box">
+            <h3>Laptops</h3>
+            <p>Work & Play</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Headphones/1.png" alt="" id="productImage_Headphones"></div>
+          <div class="text-box">
+            <h3>Headphones</h3>
+            <p>Music & More</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/smartWatches/1.png" alt="" id="productImage_smartWatches"></div>
+          <div class="text-box">
+            <h3>Smart Watches</h3>
+            <p>Stay Connected</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Fashion/1.png" alt="" id="productImage_Fashion"></div>
+          <div class="text-box">
+            <h3>Fashion</h3>
+            <p>Men, Women & Kids</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/mobile.png-removebg-preview.png" alt="" id="productImage_Footwear"></div>
+          <div class="text-box">
+            <h3>Footwear</h3>
+            <p>Step in Style</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Home & Living/1.png" alt="" id="productImage_Home&Living"></div>
+          <div class="text-box">
+            <h3>Home & Living</h3>
+            <p>Make it Home</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Beauty/1.png" alt="" id="productImage_Beauty"></div>
+          <div class="text-box">
+            <h3>Beauty</h3>
+            <p>Skincare & Makeup</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Sports/1.png" alt="" id="productImage_Sports"></div>
+          <div class="text-box">
+            <h3>Sports</h3>
+            <p>Fitness & Outdoor</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/ToysImage/1.png" alt=""  id="productImage_Toys"></div>
+          <div class="text-box">
+            <h3>Toys</h3>
+            <p>Fun for Kids</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Cameras/1.png" alt="" id="productImage_Cameras"></div>
+          <div class="text-box">
+            <h3>Cameras</h3>
+            <p>Capture Moments</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/TV & Appliances/1.png" alt="" id="productImage_TVAppliances"></div>
+          <div class="text-box">
+            <h3>TV & Appliances</h3>
+            <p>Smart Living</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Bags & Luggage/1.png" alt="" id="productImage_BagsLuggage"></div>
+          <div class="text-box">
+            <h3>Bags & Luggage</h3>
+            <p>Travel in Style</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Books & Stationery/1.png" alt="" id="productImage_BooksStationery"></div>
+          <div class="text-box">
+            <h3>Books & Stationery</h3>
+            <p>Read & Learn</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Computer Accessories/1.png" alt="" id="productImage_ComputerAccessories"></div>
+          <div class="text-box">
+            <h3>Computer Accessories</h3>
+            <p>Upgrade Your Setup</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Electronics/1.png" alt="" id="productImage_Electronics"></div>
+          <div class="text-box">
+            <h3>Electronics</h3>
+            <p>Gadgets & More</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Kids & Baby/1.png" alt="" id="productImage_KidsBaby"></div>
+          <div class="text-box">
+            <h3>Kids & Baby</h3>
+            <p>Little Ones, Big Smiles</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Automotive/1.png" alt="" id="productImage_Automotive"></div>
+          <div class="text-box">
+            <h3>Automotive</h3>
+            <p>Drive Your Passion</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Furniture/1.jpg" alt="" id="productImage_Furniture"></div>
+          <div class="text-box">
+            <h3>Furniture</h3>
+            <p>Comfort & Style</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+
+        <article class="category-card">
+          <div class="icon-box"><img src="E-iamgeitem/Jewellery & Accessories/1.png" alt="" id="productImage_JewelleryAccessories"></div>
+          <div class="text-box">
+            <h3>Jewellery & Accessories</h3>
+            <p>Add More Sparkle</p>
+          </div>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </article>
+      </div>
+
+      <div class="promo-row">
+        <div class="promo-card flash-sale">
+          <div class="promo-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="promo-text">
+            <h4>Flash Sale</h4>
+            <p>Big Discounts, Limited Time</p>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <div class="promo-text">
+            <h4>Trending Products</h4>
+            <p>What's Hot Right Now</p>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="promo-text">
+            <h4>Best Sellers</h4>
+            <p>Top Rated & Loved</p>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon"><i class="fa-solid fa-circle-plus"></i></div>
+          <div class="promo-text">
+            <h4>New Arrivals</h4>
+            <p>Latest Collection</p>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon"><i class="fa-solid fa-percent"></i></div>
+          <div class="promo-text">
+            <h4>Deals of the Day</h4>
+            <p>Save More Every Day</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="brands-box">
+          <div class="brand-logo samsung">SAMSUNG</div>
+          <div class="brand-logo mi">mi</div>
+          <div class="brand-logo nike">N</div>
+          <div class="brand-logo sony">SONY</div>
+          <div class="brand-logo intel">intel</div>
+        </div>
+
+        <div class="why-us-box">
+          <h4>Why Shop With Us?</h4>
+          <div class="why-us-list">
+            <span><i class="fa-solid fa-truck-fast"></i> Fast Delivery</span>
+            <span><i class="fa-solid fa-shield-halved"></i> Secure Payment</span>
+            <span><i class="fa-solid fa-rotate-left"></i> Easy Returns</span>
+            <span><i class="fa-solid fa-headset"></i> 24/7 Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>  
+                    <span class="hideShopCategoryCloseBtn"  onclick="closeFormsShopCategory()">&times;</span>
+                        <!-- <div></div> -->
+                    </div>
+                    
+            </div>
+<!-- ===========================================================================
+                      featuresByProduct_container        
+=========================================================================== -->
+
+             <div class="featuresByProduct_container">
+           <h2>
+  <span style="position:relative;">
+    Features
+    <i style="
+      position:absolute; bottom:-5px; left:25%; transform:translateX(-50%);
+      width:50px; height:2px; background:cyan; border-radius:10px;
+    "></i>
+  </span>
+  By Product
+</h2>
+ <div class="products-container">
+
+        <!-- 1 -->
+        <div class="product-card" onclick="window.location.href='Mobile_productDetails.html'">
+
+            <div class="product-image">
+                <span class="badge best">Best Seller</span>
+
+                <img src="E-iamgeitem/All_ItemIamge/IPhone18.png"
+                     alt="iPhone 18">
+            </div>
+
+            <div class="product-name">
+                iPhone 18
+            </div>
+
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">4.8 (1.2k)</span>
+            </div>
+
+            <div class="price-row">
+                <span class="price">₹74,999</span>
+                <span class="old-price">₹89,999</span>
+                <span class="discount">65% OFF</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+        </div>
+        <!-- 2 -->
+        <div class="product-card">
+
+            <div class="product-image">
+                <span class="badge new">New</span>
+
+                <img src="E-iamgeitem/All_ItemIamge/dell_Leptop1.png"
+                     alt="Dell Inspiron 15">
+            </div>
+
+            <div class="product-name">
+                Dell Inspiron 15
+            </div>
+
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">4.6 (856)</span>
+            </div>
+
+            <div class="price-row">
+                <span class="price">₹49,999</span>
+                <span class="old-price">₹62,999</span>
+                <span class="discount">21% OFF</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- 3 -->
+        <div class="product-card">
+
+            <div class="product-image">
+                <span class="badge hot">Hot</span>
+
+                <img src="E-iamgeitem/All_ItemIamge/BoatHeadPhone.png"
+                     alt="boAt Headphones">
+            </div>
+
+            <div class="product-name">
+                boAt Headphones
+            </div>
+
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">4.5 (2.3k)</span>
+            </div>
+
+            <div class="price-row">
+                <span class="price">₹2,499</span>
+                <span class="old-price">₹4,999</span>
+                <span class="discount">50% OFF</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- 4 -->
+        <div class="product-card">
+
+            <div class="product-image">
+                <span class="badge trending">Trending</span>
+
+                <img src="E-iamgeitem/All_ItemIamge/516U7xCZpRL-removebg-preview.png"
+                     alt="Fire-Boltt Smartwatch">
+            </div>
+
+            <div class="product-name">
+                Fire-Boltt Smartwatch
+            </div>
+
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">4.4 (1.8k)</span>
+            </div>
+
+            <div class="price-row">
+                <span class="price">₹3,999</span>
+                <span class="old-price">₹6,999</span>
+                <span class="discount">43% OFF</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- 5 -->
+        <div class="product-card">
+
+            <div class="product-image">
+                <span class="badge sale">Sale</span>
+
+                <img src="E-iamgeitem/All_ItemIamge/81eus2lvDOL._AC_SX679_-removebg-preview.png"
+                     alt="Nike Running Shoes">
+            </div>
+
+            <div class="product-name">
+                Nike Running Shoes
+            </div>
+
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">4.7 (945)</span>
+            </div>
+
+            <div class="price-row">
+                <span class="price">₹13,295 </span>
+                <span class="old-price">₹15,999</span>
+                <span class="discount">44% OFF</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+<!-- ================= PRODUCT 01 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/51mRnMaCDpL._AC_SX679_-Photoroom.png" alt="Samsung Galaxy A15 5G">
+    </div>
+    <div class="product-name">Samsung Galaxy A15 5G</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (698)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹14,999</span>
+        <span class="old-price">₹19,999</span>
+        <span class="discount">25% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 02 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.webp" alt="boAt Rockerz 450">
+    </div>
+    <div class="product-name">boAt Rockerz 450 Wireless Headphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (117796)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,299</span>
+        <span class="old-price">₹3,990</span>
+        <span class="discount">67% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 03 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/-enriched-transparent-original-imahy3uqgtzmdsge-Photoroom.png" alt="realme Buds T110">
+    </div>
+    <div class="product-name">realme Buds T110 Wireless Earbuds</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (26671)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,499</span>
+        <span class="old-price">₹2,099</span>
+        <span class="discount">29% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 04 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Realem-T310.png" alt="realme Buds T310">
+    </div>
+    <div class="product-name">realme Buds T310 ANC Earbuds</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (11739)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,999</span>
+        <span class="old-price">₹3,999</span>
+        <span class="discount">50% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 05 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/boAt Rockerz 450 Pro Headphones.webp" alt="boAt Rockerz 450 Pro">
+    </div>
+    <div class="product-name">boAt Rockerz 450 Pro Headphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (19660)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,699</span>
+        <span class="old-price">₹3,990</span>
+        <span class="discount">57% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 06 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Noise Pulse 2 Max Smart Watch.png"Noise Pulse 2 Max">
+    </div>
+    <div class="product-name">Noise Pulse 2 Max Smart Watch</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (18000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,399</span>
+        <span class="old-price">₹4,999</span>
+        <span class="discount">72% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 07 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Noise Twist Go Smart Watch.png" alt="Noise Twist Go">
+    </div>
+    <div class="product-name">Noise Twist Go Smart Watch</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">3.8 (4371)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,499</span>
+        <span class="old-price">₹3,999</span>
+        <span class="discount">63% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 08 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge out-stock">Out of Stock</span>
+        <img src="E-iamgeitem/All_ItemIamge/realme_Buds_T300_TWS_Earbuds.png" alt="realme Buds T300">
+    </div>
+    <div class="product-name">realme Buds T300 TWS Earbuds</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (11656)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,999</span>
+        <span class="old-price">₹3,999</span>
+        <span class="discount">50% OFF</span>
+    </div>
+    <button class="cart-btn" disabled>
+        <i class="fa-solid fa-ban"></i> Out of Stock
+    </button>
+</div>
+
+<!-- ================= PRODUCT 09 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Philips HL7756 750W Mixer Grinder.png" alt="Philips Mixer Grinder">
+    </div>
+    <div class="product-name">Philips HL7756 750W Mixer Grinder</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (33083)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹3,699</span>
+        <span class="old-price">₹4,795</span>
+        <span class="discount">23% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 10 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Lenovo V14 G3 Core i7 Laptop.png" alt="Lenovo V14 Laptop">
+    </div>
+    <div class="product-name">Lenovo V14 G3 Core i7 Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (500+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹45,990</span>
+        <span class="old-price">₹60,300</span>
+        <span class="discount">24% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 11 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Lenovo_14_2025_Core_i7_Laptop-.png" alt="Lenovo 14 Laptop">
+    </div>
+    <div class="product-name">Lenovo 14 2025 Core i7 Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (100+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹49,990</span>
+        <span class="old-price">₹1,10,990</span>
+        <span class="discount">55% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 12 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Lenovo_V15_Core_i7_Laptop-.png" alt="Lenovo V15 Laptop">
+    </div>
+    <div class="product-name">Lenovo V15 Core i7 Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (100+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹44,990</span>
+        <span class="old-price">₹90,000</span>
+        <span class="discount">50% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 13 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/ASUS_TUF_F15_Core_i7_Gaming.png" alt="ASUS TUF F15">
+    </div>
+    <div class="product-name">ASUS TUF F15 Core i7 Gaming Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (500+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹99,990</span>
+        <span class="old-price">₹1,31,990</span>
+        <span class="discount">24% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 14 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/HP_15_Core_i7_13th_Gen_Laptop.png" alt="HP 15 Laptop">
+    </div>
+    <div class="product-name">HP 15 Core i7 13th Gen Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (1000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹67,990</span>
+        <span class="old-price">₹83,034</span>
+        <span class="discount">18% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 15 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Dell Inspiron 15 Core i7 Laptop.png" alt="Dell Inspiron 15">
+    </div>
+    <div class="product-name">Dell Inspiron 15 Core i7 Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (100+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹69,710</span>
+        <span class="old-price">₹88,997</span>
+        <span class="discount">22% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 16 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/HP Victus Core i5 Gaming Laptop-jukebox-bg-removed.png" alt="HP Victus Gaming Laptop">
+    </div>
+    <div class="product-name">HP Victus Core i5 Gaming Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (500+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹64,990</span>
+        <span class="old-price">₹87,262</span>
+        <span class="discount">26% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 17 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Lenovo_LOQ_Ryzen_7_Gaming_Laptop-removebg-preview.png" alt="Lenovo LOQ Gaming Laptop">
+    </div>
+    <div class="product-name">Lenovo LOQ Ryzen 7 Gaming Laptop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.4 (100+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹82,462</span>
+        <span class="old-price">₹1,10,890</span>
+        <span class="discount">26% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 18 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/OnePlus Nord Buds 2r-jukebox-bg-removed.png" alt="OnePlus Nord Buds 2r">
+    </div>
+    <div class="product-name">OnePlus Nord Buds 2r</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (30000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,699</span>
+        <span class="old-price">₹2,299</span>
+        <span class="discount">26% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 19 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/iQOO Z10x 5G 8GB 128GB-jukebox-bg-removed.png" alt="iQOO Z10x 5G">
+    </div>
+    <div class="product-name">iQOO Z10x 5G 8GB 128GB</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (1000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹14,998</span>
+        <span class="old-price">₹17,999</span>
+        <span class="discount">17% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 20 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/realme NARZO 80 Lite 5G-jukebox-bg-removed.png" alt="realme NARZO 80 Lite">
+    </div>
+    <div class="product-name">realme NARZO 80 Lite 5G</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (1000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹11,499</span>
+        <span class="old-price">₹14,999</span>
+        <span class="discount">23% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 21 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Redmi A4 5G 4GB 64GB-jukebox-bg-removed.png" alt="Redmi A4 5G">
+    </div>
+    <div class="product-name">Redmi A4 5G 4GB 64GB</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹8,499</span>
+        <span class="old-price">₹11,999</span>
+        <span class="discount">29% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 22 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/SanDisk Ultra 64GB microSDXC-jukebox-bg-removed.png" alt="SanDisk Ultra 64GB">
+    </div>
+    <div class="product-name">SanDisk Ultra 64GB microSDXC</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (100000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹569</span>
+        <span class="old-price">₹1,199</span>
+        <span class="discount">53% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 23 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Portronics Bridge Y USB 3.0 to Type C-jukebox-bg-removed.png" alt="Portronics OTG Adapter">
+    </div>
+    <div class="product-name">Portronics Bridge Y USB 3.0 to Type-C OTG</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹119</span>
+        <span class="old-price">₹399</span>
+        <span class="discount">70% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 24 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/boAt Rockerz 550 Bluetooth HeadPhone.webp" alt="boAt Rockerz 550">
+    </div>
+    <div class="product-name">boAt Rockerz 550 Bluetooth Headphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (50000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,599</span>
+        <span class="old-price">₹4,999</span>
+        <span class="discount">68% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 25 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/boAt Rockerz 650 Pro Headphone-jukebox-bg-removed.png" alt="boAt Rockerz 650 Pro">
+    </div>
+    <div class="product-name">boAt Rockerz 650 Pro Headphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹2,799</span>
+        <span class="old-price">₹5,999</span>
+        <span class="discount">53% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 26 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Boult Q Over Ear Bluetooth Headphone-jukebox-bg-removed.png" alt="Boult Q Headphones">
+    </div>
+    <div class="product-name">Boult Q Over Ear Bluetooth Headphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,999</span>
+        <span class="old-price">₹4,999</span>
+        <span class="discount">60% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 27 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/soundcore by Anker H30i Headphones-jukebox-bg-removed.png" alt="soundcore H30i">
+    </div>
+    <div class="product-name">soundcore by Anker H30i Headphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹2,499</span>
+        <span class="old-price">₹4,999</span>
+        <span class="discount">50% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 28 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/FUR JADEN Anti Theft Laptop Bag-jukebox-bg-removed.png" alt="FUR JADEN Backpack">
+    </div>
+    <div class="product-name">FUR JADEN Anti Theft Laptop Backpack</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹595</span>
+        <span class="old-price">₹2,499</span>
+        <span class="discount">76% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 29 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Apple EarPods with Lightning Con-jukebox-bg-removed.png" alt="Apple EarPods">
+    </div>
+    <div class="product-name">Apple EarPods with Lightning Connector</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.4 (30000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,549</span>
+        <span class="old-price">₹2,000</span>
+        <span class="discount">23% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 30 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/realme Buds 3 Wired Earphones-jukebox-bg-removed.png" alt="realme Buds 3">
+    </div>
+    <div class="product-name">realme Buds 3 Wired Earphones</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (20000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹599</span>
+        <span class="old-price">₹999</span>
+        <span class="discount">40% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 31 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/ZEBRONICS Wired Earphones-Photoroom.png" alt="ZEBRONICS Wired Earphones">
+    </div>
+    <div class="product-name">ZEBRONICS Wired Earphones with Mic</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹139</span>
+        <span class="old-price">₹499</span>
+        <span class="discount">72% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 32 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Cubiker Foldable Laptop Table-jukebox-bg-removed.png" alt="Cubiker Laptop Table">
+    </div>
+    <div class="product-name">Cubiker Foldable Laptop Table</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,199</span>
+        <span class="old-price">₹2,499</span>
+        <span class="discount">52% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 33 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Philips Air Fryer-jukebox-bg-removed.png" alt="Philips Air Fryer">
+    </div>
+    <div class="product-name">Philips Air Fryer</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (15000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹7,999</span>
+        <span class="old-price">₹11,995</span>
+        <span class="discount">33% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 34 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Prestige Induction Cooktop-jukebox-bg-removed.png" alt="Prestige Induction Cooktop">
+    </div>
+    <div class="product-name">Prestige Induction Cooktop</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (25000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,799</span>
+        <span class="old-price">₹3,095</span>
+        <span class="discount">42% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 35 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Philips LED Desk Light-jukebox-bg-removed.png" alt="Philips LED Desk Light">
+    </div>
+    <div class="product-name">Philips LED Desk Light</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹899</span>
+        <span class="old-price">₹1,499</span>
+        <span class="discount">40% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 36 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Wipro WiFi Smart LED Bulb-jukebox-bg-removed.png" alt="Wipro Smart LED Bulb">
+    </div>
+    <div class="product-name">Wipro WiFi Smart LED Bulb</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹649</span>
+        <span class="old-price">₹999</span>
+        <span class="discount">35% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 37 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Apple Watch SE-jukebox-bg-removed.png" alt="Apple Watch SE">
+    </div>
+    <div class="product-name">Apple Watch SE</div>
+    <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-number">4.5 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹24,999</span>
+        <span class="old-price">₹29,900</span>
+        <span class="discount">16% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 38 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Samsung Galaxy Watch-jukebox-bg-removed.png" alt="Samsung Galaxy Watch">
+    </div>
+    <div class="product-name">Samsung Galaxy Watch</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹15,999</span>
+        <span class="old-price">₹29,999</span>
+        <span class="discount">47% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 39 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Amazfit Smart Watch-jukebox-bg-removed.png" alt="Amazfit Smart Watch">
+    </div>
+    <div class="product-name">Amazfit Smart Watch</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹7,999</span>
+        <span class="old-price">₹12,999</span>
+        <span class="discount">38% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 40 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Fire-Boltt Smart Watch-jukebox-bg-removed.png" alt="Fire-Boltt Smart Watch">
+    </div>
+    <div class="product-name">Fire-Boltt Smart Watch</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.0 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,499</span>
+        <span class="old-price">₹5,999</span>
+        <span class="discount">75% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 41 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Sony Bluetooth Portable Speaker_no_bg.png" alt="Sony Bluetooth Speaker">
+    </div>
+    <div class="product-name">Sony Bluetooth Portable Speaker</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.5 (20000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹3,999</span>
+        <span class="old-price">₹5,990</span>
+        <span class="discount">33% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 42 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/JBL Portable Bluetooth Speaker.png" alt="JBL Bluetooth Speaker">
+    </div>
+    <div class="product-name">JBL Portable Bluetooth Speaker</div>
+    <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-number">4.5 (30000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹4,999</span>
+        <span class="old-price">₹6,999</span>
+        <span class="discount">29% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 43 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Samsung Portable SSD 1TB_no_bg.png" alt="Samsung SSD">
+    </div>
+    <div class="product-name">Samsung Portable SSD 1TB</div>
+    <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-number">4.6 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹7,999</span>
+        <span class="old-price">₹12,999</span>
+        <span class="discount">38% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 44 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Logitech Wireless Mouse_no_bg.png" alt="Logitech Wireless Mouse">
+    </div>
+    <div class="product-name">Logitech Wireless Mouse</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.4 (50000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,295</span>
+        <span class="discount">38% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+
+<!-- ================= PRODUCT 45 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Logitech Wireless Keyboard_no_bg.png" alt="Logitech Keyboard">
+    </div>
+    <div class="product-name">Logitech Wireless Keyboard</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (30000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹999</span>
+        <span class="old-price">₹1,595</span>
+        <span class="discount">37% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+<!-- ================= PRODUCT 46 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Mi Power Bank 10000mAh_no_bg.png" alt="Mi Power Bank">
+    </div>
+    <div class="product-name">Mi Power Bank 10000mAh</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (50000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹999</span>
+        <span class="old-price">₹1,499</span>
+        <span class="discount">33% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+<!-- ================= PRODUCT 47 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Amazon Basics USB Type-C Cab_no_bg.png" alt="Amazon Basics USB Cable">
+    </div>
+    <div class="product-name">Amazon Basics USB Type-C Cable</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹299</span>
+        <span class="old-price">₹599</span>
+        <span class="discount">50% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+<!-- ================= PRODUCT 48 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge out-stock">Out of Stock</span>
+        <img src="E-iamgeitem/All_ItemIamge/Wireless Keyboard abond Mouse Combo.png" alt="Wireless Keyboard and mouse">
+    </div>
+    <div class="product-name">Wireless Keyboard and Mouse Combo</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.1 (5000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹1,199</span>
+        <span class="old-price">₹1,999</span>
+        <span class="discount">40% OFF</span>
+    </div>
+    <button class="cart-btn" disabled>
+        <i class="fa-solid fa-ban"></i> Out of Stock
+    </button>
+</div>
+<!-- ================= PRODUCT 49 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge sale">Sale</span>
+        <img src="E-iamgeitem/All_ItemIamge/Adjustable Aluminium Laptop Stand_no_bg.png" alt="Laptop Stand">
+    </div>
+    <div class="product-name">Adjustable Aluminium Laptop Stand</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.3 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹899</span>
+        <span class="old-price">₹1,999</span>
+        <span class="discount">55% OFF</span>
+    </div>
+    <button class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+</div>
+<!-- ================= PRODUCT 50 ================= -->
+<div class="product-card">
+    <div class="product-image">
+        <span class="badge out-stock">Out of Stock</span>
+        <img src="E-iamgeitem/All_ItemIamge/Gaming Mouse RGB Wired-no-bg.png" alt="Gaming Mouse">
+    </div>
+    <div class="product-name">Gaming Mouse RGB Wired</div>
+    <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-number">4.2 (10000+)</span>
+    </div>
+    <div class="price-row">
+        <span class="price">₹699</span>
+        <span class="old-price">₹1,499</span>
+        <span class="discount">53% OFF</span>
+    </div>
+    <button class="cart-btn" disabled>
+        <i class="fa-solid fa-ban"></i> Out of Stock
+    </button>
+</div>
+    </div>
+      </div>
+    </header>
+<footer id="footer">
+    <div class="footer-logo">
+        <div class="footer-brand">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div>
+                <h2>Shop<span>Zone</span></h2>
+                <p>Better Products&nbsp; • &nbsp;Better Life</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-menu">
+        <a href="#homeSectionLink_click" style="scroll-behavior:smooth;">Home</a>
+        <a href="productItem.html">Shop</a>
+        <a href="#shopByCatagory_container">Categories</a>
+        <a href="#">About</a>
+        <a href="ContactUS.html">Contact</a>
+    </div>
+    <div class="footer-social">
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f" target="_blank" rel="noopener noreferrer"></i></a>
+        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram" target="_blank" rel="noopener noreferrer"></i></a>
+        <a href="https://www.youtube.com/@Mahakal_09_Xyz"><i class="fa-brands fa-youtube" target="_blank" rel="noopener noreferrer"></i></a>
+        <a href="https://x.com/?utm_source=chatgpt.com"><i class="fa-brands fa-twitter" target="_blank" rel="noopener noreferrer"></i></a>
+        <a href="https://www.linkedin.com/in/rinku-kumar-a9b948368" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+    <div class="footer-copy">
+        © 2025 ShopZone. All rights reserved.
+    </div>
+</footer>
+<script src="E-commercGet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script> AOS.init({ duration: 1000, offset: 120, once: true }); </script>
+</body>
+</html>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Homepage update test -->
